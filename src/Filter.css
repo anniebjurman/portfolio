@@ -1,15 +1,18 @@
 
+.filter-container {
+    margin-bottom: 20px;
+}
+
 button {
     margin-right: 2rem;
-    min-width: 5rem;
-    padding: 0.5rem 1rem;
     border: none;
-    color: rgb(153, 153, 153);
+    color: #A3A3A3;
     background: none;
     font-size: medium;
     cursor: pointer;
+    padding: 5px;
 }
 
 button.active {
-    color: rgb(43, 43, 220);
+    color: rgb(28, 28, 28);
 }
