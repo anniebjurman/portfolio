@@ -1,24 +1,35 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import ProjectCard from './ProjectCard';
 
 function App() {
+
+  useEffect(() => {
+    //fetch data
+  }, [])
+
+  const projects = [
+    {id: 0, title: "VB ost"},
+    {id: 1, title: "VB ost2"},
+    {id: 2, title: "VB ost3"},
+    {id: 3, title: "VB ost4"},
+    {id: 4, title: "VB ost5"},
+    {id: 5, title: "VB ost2"},
+    {id: 6, title: "VB ost3"},
+    {id: 7, title: "VB ost4"},
+    {id: 8, title: "VB ost5"}
+  ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='projects'>
+        {projects.map(p => {
+          return <ProjectCard key={p.id} project={p}/>
+        })}
+
+      </div>
     </div>
   );
 }
