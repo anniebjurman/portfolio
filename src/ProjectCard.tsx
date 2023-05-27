@@ -6,8 +6,14 @@ function ProjectCard(props: any) {
     let imagePath: string = "../images/" + p.img;
 
     return (
-        <motion.div layout animate={{opacity: 1}} initial={{opacity: 0}} exit={{opacity: 0}}>
-            <img src={imagePath} alt="" />
+        <motion.div
+            layout
+            animate={{opacity: 1}}
+            initial={{opacity: 0}}
+            exit={{opacity: 0}}
+            whileHover={{scale: 1.1}}
+        >
+            <img className='cardImage' src={imagePath} alt="" />
             <h2>{p.title}</h2>
         </motion.div>
     )

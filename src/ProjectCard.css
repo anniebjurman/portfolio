@@ -1,11 +1,12 @@
-img {
+.cardImage {
     width: 150px;
     height: 250px;
     object-fit: cover;
     margin-top: 1rem;
     box-shadow: 2px 4px 10px rgb(0 0 0 / 0.2);
+    cursor: pointer;
   }
 
 h2 {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
 }

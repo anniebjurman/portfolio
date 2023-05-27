@@ -40,13 +40,50 @@ function App() {
   return (
     <div className="App">
      <div className='icons'>
-        <p>dark</p>
+        <div className='darkIconCont'>
+          <motion.img
+            className='icon'
+            src={"../icons/dark.svg"}
+            alt=""
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: "spring", stiffness: 300, damping: 10 }}
+          />
+        </div>
         <div className='iconGroup'>
-          <p>linkedIn</p>
-          <p>GitHub</p>
+          <a  href='https://www.linkedin.com/in/annie-bjurman-53ba02226/'
+              target="_blank"
+          >
+            <motion.img
+              className='icon'
+              src={"../icons/linkedin.svg"}
+              alt=""
+              whileHover={{ scale: 1.2 }}
+              transition={{ type: "spring", stiffness: 300, damping: 10 }}
+            />
+          </a>
+          <a  href='https://github.com/anniebjurman'
+              target="_blank"
+          >
+            <motion.img
+              className='icon'
+              src={"../icons/github.svg"}
+              alt=""
+              whileHover={{ scale: 1.2 }}
+              transition={{ type: "spring", stiffness: 300, damping: 10 }}
+            />
+          </a>
         </div>
       </div>
       <div className='header'>
+        {/* <motion.h1
+          initial={{x:-1000}}
+          animate={{x: [0, 900, 0]}}
+          transition={{
+            duration: "2",
+          }}
+        >
+          annie.
+        </motion.h1> */}
         <h1>annie.</h1>
       </div>
       <hr></hr>
