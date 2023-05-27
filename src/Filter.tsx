@@ -24,6 +24,8 @@ function Filter(props: any) {
                     onClick={() => props.setActiveFilter('react')}>react</button>
             <button className={props.activeFilter === 'angular' ? "active" : ''}
                     onClick={() => props.setActiveFilter('angular')}>angular</button>
+            <button className={props.activeFilter === 'reactNative' ? "active" : ''}
+                    onClick={() => props.setActiveFilter('reactNative')}>react native</button>
         </div>
     )
 }

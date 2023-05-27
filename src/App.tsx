@@ -17,11 +17,14 @@ function App() {
     {id: 1, title: "Grona Mackan", img: 'mackan.png', filter: ['design'], color: "#B9DA98"},
     {id: 2, title: "NASA Space app Challenge", img: 'nasa.png', filter: ['design', 'angular'], color: "#CD93B0"},
     {id: 3, title: "Hackaton", img: 'hackaton1.png', filter: ['design'], color: "#FACA85"},
-    {id: 4, title: "VB ost5", img: 'insikt.png', filter: ['design', 'react', 'angular'], color: "#E97C7C"},
-    {id: 5, title: "VB ost2", img: 'insikt.png', filter: ['design', 'angular'], color: "#8DC2E9"},
-    {id: 6, title: "VB ost3", img: 'insikt.png', filter: ['design', 'react'], color: "#8DC2E9"},
-    {id: 7, title: "VB ost4", img: 'insikt.png', filter: ['design'], color: "#8DC2E9"},
-    {id: 8, title: "VB ost5", img: 'insikt.png', filter: ['angular'], color: "#8DC2E9"}
+    {id: 4, title: "Mind Mentor", img: 'mindMentor.png', filter: ['design', 'reactNative'], color: "#B5B8FA"},
+    {id: 5, title: "VB ost", img: 'vb.png', filter: ['design'], color: "#E97C7C"},
+
+    {id: 6, title: "titel", img: 'placeholder.png', filter: ['react'], color: "#FACA85"},
+    {id: 7, title: "titel", img: 'placeholder.png', filter: ['angular', 'react'], color: "#8DC2E9"},
+    {id: 8, title: "titel", img: 'placeholder.png', filter: ['angular', 'design'], color: "#B9DA98"},
+    // {id: 9, title: "titel", img: 'placeholder.png', filter: ['reactNative', 'react'], color: "#B9DA98"},
+    // {id: 10, title: "titel", img: 'placeholder.png', filter: ['react', 'design'], color: "#CD93B0"},
   ]
 
   const [projects, setProjects] = useState<IProject[]>([]);
