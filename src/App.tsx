@@ -13,15 +13,15 @@ interface IProject {
 
 function App() {
   const proj: any[] = [
-    {id: 0, title: "Trimma INSIKT", img: 'insikt.png', filter: ['design']},
-    {id: 1, title: "Grona Mackan", img: 'mackan.png', filter: ['design']},
-    {id: 2, title: "NASA Space app Challenge", img: 'nasa.png', filter: ['design', 'angular']},
-    {id: 3, title: "Hackaton", img: 'hackaton1.png', filter: ['design']},
-    {id: 4, title: "VB ost5", img: 'insikt.png', filter: ['design', 'react', 'angular']},
-    {id: 5, title: "VB ost2", img: 'insikt.png', filter: ['design', 'angular']},
-    {id: 6, title: "VB ost3", img: 'insikt.png', filter: ['design', 'react']},
-    {id: 7, title: "VB ost4", img: 'insikt.png', filter: ['design']},
-    {id: 8, title: "VB ost5", img: 'insikt.png', filter: ['angular']}
+    {id: 0, title: "Trimma INSIKT", img: 'insikt.png', filter: ['design'], color: "#8DC2E9"},
+    {id: 1, title: "Grona Mackan", img: 'mackan.png', filter: ['design'], color: "#B9DA98"},
+    {id: 2, title: "NASA Space app Challenge", img: 'nasa.png', filter: ['design', 'angular'], color: "#CD93B0"},
+    {id: 3, title: "Hackaton", img: 'hackaton1.png', filter: ['design'], color: "#FACA85"},
+    {id: 4, title: "VB ost5", img: 'insikt.png', filter: ['design', 'react', 'angular'], color: "#E97C7C"},
+    {id: 5, title: "VB ost2", img: 'insikt.png', filter: ['design', 'angular'], color: "#8DC2E9"},
+    {id: 6, title: "VB ost3", img: 'insikt.png', filter: ['design', 'react'], color: "#8DC2E9"},
+    {id: 7, title: "VB ost4", img: 'insikt.png', filter: ['design'], color: "#8DC2E9"},
+    {id: 8, title: "VB ost5", img: 'insikt.png', filter: ['angular'], color: "#8DC2E9"}
   ]
 
   const [projects, setProjects] = useState<IProject[]>([]);

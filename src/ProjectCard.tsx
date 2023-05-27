@@ -13,7 +13,9 @@ function ProjectCard(props: any) {
             exit={{opacity: 0}}
             whileHover={{scale: 1.1}}
         >
-            <img className='cardImage' src={imagePath} alt="" />
+            <div className='cardImgCont' style={{backgroundColor: p.color}}>
+                <img className='cardImage' src={imagePath} alt="" />
+            </div>
             <h2>{p.title}</h2>
         </motion.div>
     )

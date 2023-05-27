@@ -1,12 +1,20 @@
 .cardImage {
-    width: 150px;
-    height: 250px;
-    object-fit: cover;
-    margin-top: 1rem;
-    box-shadow: 2px 4px 10px rgb(0 0 0 / 0.2);
-    cursor: pointer;
-  }
+  width: 130px;
+  height: 230px;
+  object-fit: cover;
+}
 
 h2 {
-    font-size: 0.6rem;
+  font-size: 0.6rem;
+}
+
+.cardImgCont {
+  width: 180px;
+  height: 280px;
+  /* background-color: aqua; */
+  box-shadow: 2px 4px 10px rgb(0 0 0 / 0.2);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
