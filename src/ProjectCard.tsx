@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './ProjectCard.css';
 import { motion } from "framer-motion";
 

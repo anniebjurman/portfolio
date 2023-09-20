@@ -69,6 +69,7 @@ function App() {
         <div className='iconGroup'>
           <a href='https://www.linkedin.com/in/annie-bjurman-53ba02226/'
             target="_blank"
+            rel="noreferrer"
           >
             <motion.img
               className='icon'
@@ -80,6 +81,7 @@ function App() {
           </a>
           <a href='https://github.com/anniebjurman'
             target="_blank"
+            rel="noreferrer"
           >
             <motion.img
               className='icon'
