@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import Filter from './Filter';
 import { motion, AnimatePresence } from 'framer-motion';
+import ProjectInformation from './ProjectInformation';
 
 interface IProject {
   id: string;
@@ -13,15 +14,15 @@ interface IProject {
 
 function App() {
   const proj: any[] = [
-    {id: 0, title: "Trimma INSIKT", img: 'insikt.png', filter: ['design'], color: "#8DC2E9"},
-    {id: 1, title: "Grona Mackan", img: 'mackan2.png', filter: ['design'], color: "#B9DA98"},
-    {id: 2, title: "NASA Space app Challenge", img: 'nasa.png', filter: ['design', 'angular'], color: "#CD93B0"},
-    {id: 3, title: "Hackon", img: 'hackaton1.png', filter: ['design'], color: "#FACA85"},
-    {id: 4, title: "Mind Mentor", img: 'mindMentor.png', filter: ['design', 'reactNative'], color: "#B5B8FA"},
-    {id: 7, title: "The Maze Game", img: 'maze2.png', filter: ['computerGraphics'], color: "#8DC2E9"},
-    {id: 5, title: "Vasterbottensost", img: 'vb.png', filter: ['design'], color: "#E97C7C"},
-    {id: 6, title: "OpenGL animation", img: 'animation1.png', filter: ['computerGraphics'], color: "#FACA85"},
-    {id: 8, title: "titel", img: 'placeholder.png', filter: ['angular', 'design', 'react'], color: "#B9DA98"},
+    { id: 0, title: "Trimma INSIKT", img: 'insikt.png', filter: ['design'], color: "#8DC2E9" },
+    { id: 1, title: "Grona Mackan", img: 'mackan2.png', filter: ['design'], color: "#B9DA98" },
+    { id: 2, title: "NASA Space app Challenge", img: 'nasa.png', filter: ['design', 'angular'], color: "#CD93B0" },
+    { id: 3, title: "Hackon", img: 'hackaton1.png', filter: ['design'], color: "#FACA85" },
+    { id: 4, title: "Mind Mentor", img: 'mindMentor.png', filter: ['design', 'reactNative'], color: "#B5B8FA" },
+    { id: 7, title: "The Maze Game", img: 'maze2.png', filter: ['computerGraphics'], color: "#8DC2E9" },
+    { id: 5, title: "Vasterbottensost", img: 'vb.png', filter: ['design'], color: "#E97C7C" },
+    { id: 6, title: "OpenGL animation", img: 'animation1.png', filter: ['computerGraphics'], color: "#FACA85" },
+    { id: 8, title: "titel", img: 'placeholder.png', filter: ['angular', 'design', 'react'], color: "#B9DA98" },
     // {id: 9, title: "titel", img: 'placeholder.png', filter: ['reactNative', 'react'], color: "#B9DA98"},
     // {id: 10, title: "titel", img: 'placeholder.png', filter: ['react', 'design'], color: "#CD93B0"},
   ]
@@ -29,6 +30,7 @@ function App() {
   const [projects, setProjects] = useState<IProject[]>([]);
   const [filtered, setFiltered] = useState<IProject[]>([]);
   const [activeFilter, setActiveFilter] = useState('all');
+  const [openProject, setOpenProject] = useState(null);
 
   useEffect(() => {
     setThings();
@@ -39,9 +41,22 @@ function App() {
     setFiltered(proj);
   }
 
+  let toggleProjectInfo = (project: any) => {
+    setOpenProject(project)
+  }
+
+  function ShowProjectInformation() {
+    if (openProject != null) {
+      return <ProjectInformation project={openProject} parentCallback={toggleProjectInfo}/>;
+    } else {
+      return null;
+    }
+  }
+
   return (
     <div className="App">
-     <div className='icons'>
+      <ShowProjectInformation />
+      <div className='icons'>
         <div className='darkIconCont'>
           <motion.img
             className='icon'
@@ -52,8 +67,8 @@ function App() {
           />
         </div>
         <div className='iconGroup'>
-          <a  href='https://www.linkedin.com/in/annie-bjurman-53ba02226/'
-              target="_blank"
+          <a href='https://www.linkedin.com/in/annie-bjurman-53ba02226/'
+            target="_blank"
           >
             <motion.img
               className='icon'
@@ -63,8 +78,8 @@ function App() {
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             />
           </a>
-          <a  href='https://github.com/anniebjurman'
-              target="_blank"
+          <a href='https://github.com/anniebjurman'
+            target="_blank"
           >
             <motion.img
               className='icon'
@@ -89,14 +104,13 @@ function App() {
         <h1>annie.</h1>
       </div>
       <hr></hr>
-      <Filter projects={projects} setFiltered={setFiltered} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
+      <Filter projects={projects} setFiltered={setFiltered} activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
       <motion.div layout className='projects'>
         <AnimatePresence>
           {filtered.map(p => {
-            return <ProjectCard key={p.id} project={p}/>
+            return <ProjectCard key={p.id} project={p} parentCallback={toggleProjectInfo} />
           })}
         </AnimatePresence>
-
       </motion.div>
     </div>
   );

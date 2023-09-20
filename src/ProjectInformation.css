@@ -1,0 +1,36 @@
+.cardCont {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    margin: 3% 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    text-align: center;
+}
+
+.icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.icon img:hover {
+    cursor: pointer;
+}
+
+/* .noScroll {
+    overflow: hidden;
+}
+
+.scroll {
+    overflow: scroll;
+} */
