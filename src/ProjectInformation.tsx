@@ -35,6 +35,10 @@ function ProjectInformation(props: any) {
                         Commodo fugiat ut aliquip exercitation ullamco veniam velit nostrud dolor nostrud proident
                         consectetur elit eiusmod. Minim deserunt quis aliquip consequat cillum ea magna. Est qui pariatur
                         laborum labore labore sint.</p>
+                    <p>Enim dolor cillum nisi voluptate et ea est. Qui tempor do fugiat ipsum nulla.
+                        Commodo fugiat ut aliquip exercitation ullamco veniam velit nostrud dolor nostrud proident
+                        consectetur elit eiusmod. Minim deserunt quis aliquip consequat cillum ea magna. Est qui pariatur
+                        laborum labore labore sint.</p>
                 </div>
             </div>
         </motion.div>

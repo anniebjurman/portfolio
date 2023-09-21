@@ -22,9 +22,7 @@ function App() {
     { id: 7, title: "The Maze Game", img: 'maze2.png', filter: ['computerGraphics'], color: "#8DC2E9" },
     { id: 5, title: "Vasterbottensost", img: 'vb.png', filter: ['design'], color: "#E97C7C" },
     { id: 6, title: "OpenGL animation", img: 'animation1.png', filter: ['computerGraphics'], color: "#FACA85" },
-    { id: 8, title: "titel", img: 'placeholder.png', filter: ['angular', 'design', 'react'], color: "#B9DA98" },
-    // {id: 9, title: "titel", img: 'placeholder.png', filter: ['reactNative', 'react'], color: "#B9DA98"},
-    // {id: 10, title: "titel", img: 'placeholder.png', filter: ['react', 'design'], color: "#CD93B0"},
+    { id: 8, title: "titel", img: 'placeholder.png', filter: ['angular', 'design', 'react'], color: "#B9DA98" }
   ]
 
   const [projects, setProjects] = useState<IProject[]>([]);

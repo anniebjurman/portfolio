@@ -16,3 +16,10 @@ button {
 button.active {
     color: rgb(28, 28, 28);
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .filter-container {
+        text-align: center;
+    }
+  }

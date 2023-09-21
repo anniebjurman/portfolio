@@ -1,10 +1,10 @@
 .cardCont {
-    position: absolute;
+    position: fixed;
     z-index: 10;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
@@ -26,6 +26,13 @@
 .icon img:hover {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .container {
+        margin: 3% 5%;
+    }
+  }
 
 /* .noScroll {
     overflow: hidden;
