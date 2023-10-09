@@ -1,13 +1,16 @@
 import './ProjectInformation.css';
 import { motion } from "framer-motion";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function ProjectInformation(props: any) {
-    let p = props.project;
+    const navigate = useNavigate();
+
+    const location = useLocation()
+    const { project } = location.state
     // let imagePath: string = "../images/" + p.img;
 
-    let onTrigger = (event: any) => {
-        props.parentCallback(null);
-        event.preventDefault();
+    let toHome = (event: any) => {
+        navigate('/');
     }
 
     return (
@@ -16,20 +19,20 @@ function ProjectInformation(props: any) {
             initial={{ opacity: 0 }}
             exit={{ opacity: 0 }}
         >
-            <div className='cardCont' style={{ backgroundColor: p.color }}>
+            <div className='cardCont' style={{ backgroundColor: project.color }}>
                 <div className='container'>
                     <div className='icon'>
                         <motion.img
                             className='icon'
-                            src={"../icons/close1.svg"}
+                            src={"../icons/back.svg"}
                             alt=""
                             whileHover={{ scale: 1.2 }}
                             transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                            onClick={onTrigger}
+                            onClick={toHome}
                         />
                     </div>
                     <div className='center'>
-                        <h1>{p.title}</h1>
+                        <h1>{project.title}</h1>
                     </div>
                     <p>Enim dolor cillum nisi voluptate et ea est. Qui tempor do fugiat ipsum nulla.
                         Commodo fugiat ut aliquip exercitation ullamco veniam velit nostrud dolor nostrud proident
