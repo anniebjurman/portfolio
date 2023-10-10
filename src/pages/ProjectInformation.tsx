@@ -1,6 +1,8 @@
 import './ProjectInformation.css';
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from 'react-router-dom';
+import CreatedWithList from '../components/CreatedWithList';
+import { CreatedWith } from '../Enums';
 
 function ProjectInformation(props: any) {
     const navigate = useNavigate();
@@ -34,6 +36,7 @@ function ProjectInformation(props: any) {
                     <div className='center'>
                         <h1>{project.title}</h1>
                     </div>
+                    <CreatedWithList createdWith={project.createdWith}/>
                     <p>Enim dolor cillum nisi voluptate et ea est. Qui tempor do fugiat ipsum nulla.
                         Commodo fugiat ut aliquip exercitation ullamco veniam velit nostrud dolor nostrud proident
                         consectetur elit eiusmod. Minim deserunt quis aliquip consequat cillum ea magna. Est qui pariatur

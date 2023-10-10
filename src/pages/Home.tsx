@@ -3,30 +3,104 @@ import { useEffect, useState } from 'react';
 import ProjectCard from '../components/ProjectCard';
 import Filter from '../components/Filter';
 import { motion, AnimatePresence } from 'framer-motion';
+import { CreatedWith, FilterCategories } from '../Enums'
 
 interface IProject {
   id: string;
   title: string;
   img: string;
   filter: string[];
+  color: string;
+  createdWith: CreatedWith[];
 }
 
 function Home() {
   const proj: any[] = [
-    { id: 0, title: "Trimma INSIKT", img: 'insikt.png', filter: ['design'], color: "#8DC2E9" },
-    { id: 1, title: "Grona Mackan", img: 'mackan2.png', filter: ['design'], color: "#B9DA98" },
-    { id: 2, title: "NASA Space app Challenge", img: 'nasa.png', filter: ['design', 'angular'], color: "#CD93B0" },
-    { id: 3, title: "Hackon", img: 'hackaton1.png', filter: ['design'], color: "#8fdba9" },
-    { id: 4, title: "Mind Mentor", img: 'mindMentor.png', filter: ['design', 'reactNative'], color: "#B5B8FA" },
-    { id: 7, title: "The Maze Game", img: 'maze2.png', filter: ['computerGraphics'], color: "#8DC2E9" },
-    { id: 5, title: "Vasterbottensost", img: 'vb.png', filter: ['design'], color: "#E97C7C" },
-    { id: 6, title: "OpenGL animation", img: 'animation1.png', filter: ['computerGraphics'], color: "#FACA85" },
-    { id: 8, title: "titel", img: 'placeholder.png', filter: ['angular', 'design', 'react'], color: "#B9DA98" }
+    {
+      id: 0,
+      title: "Trimma INSIKT",
+      img: 'insikt.png',
+      filter: [FilterCategories.DESIGN],
+      color: "#8DC2E9",
+      createdWith: [CreatedWith.ADOBE_XD]
+    },
+    {
+      id: 2,
+      title: "NASA Space app Challenge",
+      img: 'nasa.png',
+      filter: [FilterCategories.DESIGN, FilterCategories.ANGULAR],
+      color: "#CD93B0",
+      createdWith: [CreatedWith.HTML, CreatedWith.CSS]
+    },
+    {
+      id: 3,
+      title: "Hackon",
+      img: 'hackaton1.png',
+      filter: [FilterCategories.DESIGN],
+      color: "#8fdba9",
+      createdWith: [CreatedWith.ADOBE_XD]
+    },
+    {
+      id: 4,
+      title: "Mind Mentor",
+      img: 'mindMentor.png',
+      filter: [FilterCategories.DESIGN, FilterCategories.REACT_NATIVE],
+      color: "#B5B8FA",
+      createdWith: [CreatedWith.ADOBE_XD]
+    },
+    {
+      id: 7,
+      title: "The Maze Game",
+      img: 'maze2.png',
+      filter: [FilterCategories.COMPUTER_GRAPHICS],
+      color: "#8DC2E9",
+      createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL]
+    },
+    {
+      id: 5,
+      title: "Västerbottensost",
+      img: 'vb.png',
+      filter: [FilterCategories.DESIGN],
+      color: "#E97C7C",
+      createdWith: [CreatedWith.ADOBE_XD]
+    },
+    {
+      id: 6,
+      title: "OpenGL animation",
+      img: 'animation1.png',
+      filter: [FilterCategories.COMPUTER_GRAPHICS],
+      color: "#FACA85",
+      createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL]
+    },
+    {
+      id: 8,
+      title: "Vad säger systemet?",
+      img: 'vss.jpeg',
+      filter: [FilterCategories.ANDROID, FilterCategories.DESIGN],
+      color: "#83c9b3",
+      createdWith: [CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN]
+    },
+    {
+      id: 9,
+      title: "Thirty",
+      img: 'thirty.png',
+      filter: [FilterCategories.DESIGN, FilterCategories.ANDROID],
+      color: "#f5b895",
+      createdWith: [CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN]
+    },
+    {
+      id: 10,
+      title: "Portfolio",
+      img: 'placeholder.png',
+      filter: [FilterCategories.DESIGN, FilterCategories.REACT],
+      color: "#dc9ede",
+      createdWith: [CreatedWith.REACT, CreatedWith.FRAMER_MOTION]
+    }
   ]
 
   const [projects, setProjects] = useState<IProject[]>([]);
   const [filtered, setFiltered] = useState<IProject[]>([]);
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState(FilterCategories.ALL);
 
   useEffect(() => {
     setThings();
@@ -39,7 +113,6 @@ function Home() {
 
   return (
     <div className="App">
-      {/* <ShowProjectInformation /> */}
       <div className='icons'>
         <div className='darkIconCont'>
           <motion.img

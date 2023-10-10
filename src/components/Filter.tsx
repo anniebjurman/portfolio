@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import "./Filter.css";
+import { FilterCategories } from "../Enums";
 
 function Filter(props: any) {
 
     useEffect(() => {
-        if (props.activeFilter === "all") {
+        if (props.activeFilter === FilterCategories.ALL) {
             props.setFiltered(props.projects);
             return;
         }
@@ -16,18 +17,20 @@ function Filter(props: any) {
 
     return (
         <div className="filter-container">
-            <button className={props.activeFilter === 'all' ? "active" : ''}
-                    onClick={() => props.setActiveFilter('all')}>all</button>
-            <button className={props.activeFilter === 'design' ? "active" : ''}
-                    onClick={() => props.setActiveFilter('design')}>design</button>
-            <button className={props.activeFilter === 'react' ? "active" : ''}
-                    onClick={() => props.setActiveFilter('react')}>react</button>
-            <button className={props.activeFilter === 'angular' ? "active" : ''}
-                    onClick={() => props.setActiveFilter('angular')}>angular</button>
-            <button className={props.activeFilter === 'reactNative' ? "active" : ''}
-                    onClick={() => props.setActiveFilter('reactNative')}>react native</button>
-            <button className={props.activeFilter === 'computerGraphics' ? "active" : ''}
-                    onClick={() => props.setActiveFilter('computerGraphics')}>computer graphics</button>
+            <button className={props.activeFilter === FilterCategories.ALL ? "active" : ''}
+                    onClick={() => props.setActiveFilter(FilterCategories.ALL)}>all</button>
+            <button className={props.activeFilter === FilterCategories.DESIGN ? "active" : ''}
+                    onClick={() => props.setActiveFilter(FilterCategories.DESIGN)}>design</button>
+            <button className={props.activeFilter === FilterCategories.REACT ? "active" : ''}
+                    onClick={() => props.setActiveFilter(FilterCategories.REACT)}>react</button>
+            <button className={props.activeFilter === FilterCategories.ANGULAR ? "active" : ''}
+                    onClick={() => props.setActiveFilter(FilterCategories.ANGULAR)}>angular</button>
+            <button className={props.activeFilter === FilterCategories.REACT_NATIVE ? "active" : ''}
+                    onClick={() => props.setActiveFilter(FilterCategories.REACT_NATIVE)}>react native</button>
+            <button className={props.activeFilter === FilterCategories.COMPUTER_GRAPHICS ? "active" : ''}
+                    onClick={() => props.setActiveFilter(FilterCategories.COMPUTER_GRAPHICS)}>computer graphics</button>
+            <button className={props.activeFilter === FilterCategories.ANDROID ? "active" : ''}
+                    onClick={() => props.setActiveFilter(FilterCategories.ANDROID)}>android</button>
         </div>
     )
 }
