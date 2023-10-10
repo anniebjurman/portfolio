@@ -13,18 +13,30 @@
     flex-direction: column;
 }
 
-.center {
+.projTitle {
     text-align: center;
 }
 
-.icon {
+.projectTitle {
+    font-size: 2.5em;
+}
+
+.desciption {
+    margin-bottom: 30px;
+}
+
+.icons {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: baseline;
 }
 
-.icon img:hover {
+.icons img:hover {
     cursor: pointer;
+}
+
+.i {
+    height: 25px;
 }
 
 @media only screen and (max-width: 768px) {
