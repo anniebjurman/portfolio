@@ -4,97 +4,119 @@ import ProjectCard from '../components/ProjectCard';
 import Filter from '../components/Filter';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CreatedWith, FilterCategories } from '../Enums'
-
-interface IProject {
-  id: string;
-  title: string;
-  img: string;
-  filter: string[];
-  color: string;
-  createdWith: CreatedWith[];
-}
+import { IProject } from '../Interfaces';
 
 function Home() {
-  const proj: any[] = [
+  const proj: IProject[] = [
     {
       id: 0,
       title: "Trimma INSIKT",
-      img: 'insikt.png',
+      img: ['insikt.png'],
       filter: [FilterCategories.DESIGN],
       color: "#8DC2E9",
-      createdWith: [CreatedWith.ADOBE_XD]
+      createdWith: [CreatedWith.ADOBE_XD],
+      mobile: true,
+      description: "Framtagande av en designlösning för mobila enheter för Trimmas (nuvarande Twoday) produkt Insikt. Detta genomfördes i grupp under kursen “DBT” på Umeå Universitet vårterminen 2022.",
+      accWords: ['designlösning', 'grupp', 'vårterminen', '2022.']
     },
     {
       id: 2,
       title: "NASA Space app Challenge",
-      img: 'nasa.png',
+      img: ['nasa.png'],
       filter: [FilterCategories.DESIGN, FilterCategories.ANGULAR],
       color: "#CD93B0",
-      createdWith: [CreatedWith.HTML, CreatedWith.CSS]
+      createdWith: [CreatedWith.HTML, CreatedWith.CSS],
+      mobile: false,
+      description: "Hej!",
+      accWords: []
     },
     {
       id: 3,
       title: "Hackon",
-      img: 'hackaton1.png',
+      img: ['hackaton1.png'],
       filter: [FilterCategories.DESIGN],
       color: "#8fdba9",
-      createdWith: [CreatedWith.ADOBE_XD]
+      createdWith: [CreatedWith.ADOBE_XD],
+      mobile: true,
+      description: "Hej!",
+      accWords: []
     },
     {
       id: 4,
       title: "Mind Mentor",
-      img: 'mindMentor.png',
+      img: ['mindMentor.png'],
       filter: [FilterCategories.DESIGN, FilterCategories.REACT_NATIVE],
       color: "#B5B8FA",
-      createdWith: [CreatedWith.ADOBE_XD]
+      createdWith: [CreatedWith.ADOBE_XD],
+      mobile: true,
+      description: "Hej!",
+      accWords: []
     },
     {
       id: 7,
       title: "The Maze Game",
-      img: 'maze2.png',
+      img: ['maze2.png'],
       filter: [FilterCategories.COMPUTER_GRAPHICS],
       color: "#8DC2E9",
-      createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL]
+      createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL],
+      mobile: false,
+      description: "Hej!",
+      accWords: []
     },
     {
       id: 5,
       title: "Västerbottensost",
-      img: 'vb.png',
+      img: ['vb.png'],
       filter: [FilterCategories.DESIGN],
       color: "#E97C7C",
-      createdWith: [CreatedWith.ADOBE_XD]
+      createdWith: [CreatedWith.ADOBE_XD],
+      mobile: true,
+      description: "Hej!",
+      accWords: []
     },
     {
       id: 6,
       title: "OpenGL animation",
-      img: 'animation1.png',
+      img: ['animation1.png'],
       filter: [FilterCategories.COMPUTER_GRAPHICS],
       color: "#FACA85",
-      createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL]
+      createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL],
+      mobile: false,
+      description: "Hej!",
+      accWords: []
     },
     {
       id: 8,
       title: "Vad säger systemet?",
-      img: 'vss.jpeg',
+      img: ['vss.jpeg'],
       filter: [FilterCategories.ANDROID, FilterCategories.DESIGN],
       color: "#83c9b3",
-      createdWith: [CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN]
+      createdWith: [CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN],
+      mobile: true,
+      description: "Hej!",
+      accWords: []
     },
     {
       id: 9,
       title: "Thirty",
-      img: 'thirty.png',
+      img: ['thirty.png'],
       filter: [FilterCategories.DESIGN, FilterCategories.ANDROID],
       color: "#f5b895",
-      createdWith: [CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN]
+      createdWith: [CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN],
+      mobile: true,
+      description: "Hej!",
+      accWords: []
     },
     {
       id: 10,
       title: "Portfolio",
-      img: 'placeholder.png',
+      img: ['placeholder.png'],
       filter: [FilterCategories.DESIGN, FilterCategories.REACT],
       color: "#dc9ede",
-      createdWith: [CreatedWith.REACT, CreatedWith.FRAMER_MOTION]
+      createdWith: [CreatedWith.REACT, CreatedWith.FRAMER_MOTION],
+      mobile: false,
+      description: "Hej!",
+      accWords: []
     }
   ]
 

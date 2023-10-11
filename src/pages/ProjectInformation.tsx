@@ -2,13 +2,13 @@ import './ProjectInformation.css';
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from 'react-router-dom';
 import CreatedWithList from '../components/CreatedWithList';
+import { IProject } from '../Interfaces';
 
 function ProjectInformation(props: any) {
     const navigate = useNavigate();
 
     const location = useLocation()
     const { project } = location.state
-    // let imagePath: string = "../images/" + p.img;
 
     let toHome = (event: any) => {
         navigate('/');
@@ -47,17 +47,30 @@ function ProjectInformation(props: any) {
                     <div className='projTitle'>
                         <h1 className='projectTitle'>{project.title}</h1>
                     </div>
-                    <p className='desciption'>Enim dolor cillum nisi voluptate et ea est. Qui tempor do fugiat ipsum nulla.
-                        Commodo fugiat ut aliquip exercitation ullamco veniam velit nostrud dolor nostrud proident
-                        consectetur elit eiusmod. Minim deserunt quis aliquip consequat cillum ea magna. Est qui pariatur
-                        laborum labore labore sint. Commodo fugiat ut aliquip exercitation ullamco veniam velit nostrud dolor nostrud proident
-                        consectetur elit eiusmod.</p>
-                    <CreatedWithList createdWith={project.createdWith}/>
+                    {getDescriptionElement(project)}
+                    <CreatedWithList createdWith={project.createdWith} />
+                    <div></div>
                 </div>
             </div>
         </motion.div>
     )
+}
 
+function getDescriptionElement(p: IProject) {
+    var res: JSX.Element[] = []
+    var words = p.description.split(" ")
+
+    let i = 0;
+    while (i < words.length) {
+        if (p.accWords.includes(words[i])) {
+            res.push(<span style={{ fontWeight: 'bold' }}>{words[i] + " "}</span>)
+        } else {
+            res.push(<span>{words[i] + " "}</span>)
+        }
+        i++;
+    }
+
+    return <p className='desciption'>{res}</p>
 }
 
 export default ProjectInformation;

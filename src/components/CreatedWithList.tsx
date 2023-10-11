@@ -2,12 +2,7 @@ import "./CreatedWithList.css";
 import { CreatedWith } from "../Enums";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
-interface ICreatedWith {
-    title: string;
-    img: string;
-    link: string;
-}
+import { ICreatedWith } from "../Interfaces";
 
 function CreatedWithList(props: any) {
     const [createdWith, setCreatedWith] = useState<ICreatedWith[]>([]);
@@ -24,7 +19,7 @@ function CreatedWithList(props: any) {
     return (
         <div className="outerCont">
             {createdWith.map(cw => (
-                <a href={cw.link} target="_blank" style={{ textDecoration: 'none' }}>
+                <a href={cw.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
                 <motion.div
                     layout
                     animate={{ opacity: 1 }}
@@ -34,7 +29,7 @@ function CreatedWithList(props: any) {
                     className="cwCont"
                 >
                     <div className="iconCont">
-                        <img src={"./images/created_with/" + cw.img} />
+                        <img src={"./images/created_with/" + cw.img} alt="HEJ"/>
                     </div>
                     <h2 className="cwTitle">{cw.title}</h2>
                 </motion.div>
