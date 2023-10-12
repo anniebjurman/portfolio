@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gravitas+One&display=swap');
-body::-webkit-scrollbar { /*  Chrome, Safari and Opera */
-  display: none;
-}
 
-body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+.base {
+  padding: 3% 20%;
 }
 
 .projects {
@@ -68,5 +64,16 @@ hr {
   /* For mobile phones: */
   .projects {
     justify-content: space-around;
+    column-gap: 20px;
+    row-gap: 40px;
+  }
+
+  .base {
+    padding: 3% 5%;
+    padding-bottom: 15%;
+  }
+
+  h1 {
+    font-size: 3em;
   }
 }

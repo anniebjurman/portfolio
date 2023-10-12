@@ -19,7 +19,7 @@ button.active {
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
-    .filter-container {
+    /* .filter-container {
         text-align: center;
-    }
+    } */
   }

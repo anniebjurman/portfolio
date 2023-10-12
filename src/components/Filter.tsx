@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./Filter.css";
-import { FilterCategories } from "../Enums";
+import { FilterCategories } from "../enums";
 
 function Filter(props: any) {
 

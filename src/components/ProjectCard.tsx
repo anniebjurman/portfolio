@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 function ProjectCard(props: any) {
-    let p = props.project;
-    let imagePath: string = "../images/" + p.img;
+    let p = props.project
+    let sp = props.scrollPos
+    let imagePath: string = "../images/" + p.img[0]
 
     return (
         <motion.div
@@ -14,7 +15,7 @@ function ProjectCard(props: any) {
             exit={{ opacity: 0 }}
             whileHover={{ scale: 1.1 }}
         >
-            <Link to={"/project"} state={{ project: p }} style={{ textDecoration: 'none' }}>
+            <Link to={"/project"} state={{ project: p, scrollPos: sp }} style={{ textDecoration: 'none' }}>
                 <div className='cardImgCont' style={{ backgroundColor: p.color }}>
                     <img className='cardImage' src={imagePath} alt="" />
                 </div>

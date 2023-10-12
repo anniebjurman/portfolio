@@ -1,4 +1,4 @@
-import { CreatedWith, FilterCategories } from "./Enums";
+import { CreatedWith, FilterCategories } from "./enums";
 
 interface ICreatedWith {
   title: string;

@@ -1,16 +1,9 @@
-.cardCont {
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    min-height: 100vh;
-}
 
 .container {
-    margin: 3% 20%;
+    padding: 3% 20%;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .projTitle {
@@ -22,7 +15,6 @@
 }
 
 .desciption {
-    margin-bottom: 30px;
     font-size: 0.9em;
     line-height: 20px;
 }
@@ -41,17 +33,45 @@
     height: 25px;
 }
 
+.imgContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.imgContainer > img {
+    box-shadow: 2px 4px 10px rgb(0 0 0 / 0.2);
+    object-fit: cover;
+}
+
+.mobile {
+    height: 400px;
+    width: 190px;
+}
+
+.desktop {
+    height: 280px;
+    width: 400px;
+}
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .container {
-        margin: 3% 5%;
+        padding: 3% 5%;
+    }
+
+    .projectTitle {
+        font-size: 1.5em;
+    }
+
+    .desktop {
+        height: 220px;
+        width: 300px;
+    }
+
+    .mobile {
+        height: 300px;
+        width: 140px;
     }
   }
-
-/* .noScroll {
-    overflow: hidden;
-}
-
-.scroll {
-    overflow: scroll;
-} */
