@@ -24,7 +24,8 @@ enum CreatedWith {
     ANDROID_STUDIO,
     KOTLIN,
     FIREBASE,
-    FRAMER_MOTION
+    FRAMER_MOTION,
+    JAVA_SCRIPT
 }
 
 export {FilterCategories, CreatedWith}

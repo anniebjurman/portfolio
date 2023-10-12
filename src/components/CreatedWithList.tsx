@@ -25,10 +25,9 @@ function CreatedWithList(props: any) {
             {createdWith.map(cw => (
                 <a href={cw.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }} key={cw.title}>
                 <motion.div
-                    layout
-                    animate={{ opacity: 1 }}
-                    initial={{ opacity: 0 }}
-                    exit={{ opacity: 0 }}
+                    initial={{ scale: 1.07 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", bounce: 0.5, }}
                     whileHover={{ scale: 1.1 }}
                     className="cwCont"
                 >

@@ -48,8 +48,15 @@ function ProjectInformation(props: any) {
                 <div className='projTitle'>
                     <h1 className='projectTitle'>{project.title}</h1>
                 </div>
-                {getDescriptionElement(project)}
-                <CreatedWithList createdWith={project.createdWith} color={project.color} />
+                <div className='infoContainer'>
+                    <div className='cwOuterContainer'>
+                        <p>Created with</p>
+                        <div className='cwContainer'>
+                            <CreatedWithList createdWith={project.createdWith} color={project.color} />
+                        </div>
+                    </div>
+                    {getDescriptionElement(project)}
+                </div>
                 {getImgElement(project)}
             </div>
         </motion.div>
@@ -91,7 +98,9 @@ function getDescriptionElement(p: IProject): JSX.Element {
 
     let i = 0;
     while (i < words.length) {
-        if (p.accWords.includes(words[i])) {
+        if (words[i] == "\n") {
+            res.push(<br></br>)
+        } else if (p.accWords.includes(words[i])) {
             res.push(<span style={{ fontWeight: 'bold' }} key={i}>{words[i] + " "}</span>)
         } else {
             res.push(<span key={i}>{words[i] + " "}</span>)

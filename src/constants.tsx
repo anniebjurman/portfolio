@@ -10,8 +10,11 @@ const projects: IProject[] = [
         color: "#9DCA7C",
         createdWith: [CreatedWith.ADOBE_XD],
         mobile: true,
-        description: "Framtagande av en designlösning för mobila enheter för Trimmas (nuvarande Twoday) produkt Insikt. Detta genomfördes i grupp under kursen “DBT” på Umeå Universitet vårterminen 2022.",
-        accWords: ['designlösning', 'grupp', 'vårterminen', '2022.']
+        description: `Framtagande av en designlösning för mobila enheter för Trimmas (nuvarande Twoday) produkt Insikt.
+                    Detta genomfördes i grupp under kursen “DBT” på Umeå Universitet vårterminen 2022. \n 
+                    Det arbetades nära kunder och utfördes användaretester på designen för att få den så bra 
+                    som möjligt.`,
+        accWords: ['designlösning', 'grupp', 'vårterminen', '2022.', 'användaretester']
     },
     {
         id: 2,
@@ -19,29 +22,29 @@ const projects: IProject[] = [
         img: ['nasa.png', 'nasa2.png'],
         filter: [FilterCategories.DESIGN, FilterCategories.ANGULAR],
         color: "#CD93B0",
-        createdWith: [CreatedWith.HTML, CreatedWith.CSS],
+        createdWith: [CreatedWith.HTML, CreatedWith.CSS, CreatedWith.JAVA_SCRIPT],
         mobile: false,
         description: "Hej!",
         accWords: []
     },
-    {
-        id: 3,
-        title: "Hackon",
-        img: ['hackaton1.png'],
-        filter: [FilterCategories.DESIGN],
-        color: "#8fdba9",
-        createdWith: [CreatedWith.ADOBE_XD],
-        mobile: true,
-        description: "Hej!",
-        accWords: []
-    },
+    // {
+    //     id: 3,
+    //     title: "Hackon",
+    //     img: ['hackaton1.png'],
+    //     filter: [FilterCategories.DESIGN],
+    //     color: "#8fdba9",
+    //     createdWith: [CreatedWith.ADOBE_XD],
+    //     mobile: true,
+    //     description: "Hej!",
+    //     accWords: []
+    // },
     {
         id: 4,
         title: "Mind Mentor",
-        img: ['mindMentor.png'],
+        img: ['mind_mentor1.png', 'mind_mentor2.png', 'mind_mentor3.png', 'mind_mentor4.png'],
         filter: [FilterCategories.DESIGN, FilterCategories.REACT_NATIVE],
         color: "#B5B8FA",
-        createdWith: [CreatedWith.ADOBE_XD],
+        createdWith: [CreatedWith.FIGMA, CreatedWith.REACT_NATIVE],
         mobile: true,
         description: "Hej!",
         accWords: []
@@ -49,7 +52,7 @@ const projects: IProject[] = [
     {
         id: 7,
         title: "The Maze Game",
-        img: ['maze_game1.png', 'maze_game2.png', 'maze_game3.png'],
+        img: ['maze_game3.png', 'maze_game2.png'],
         filter: [FilterCategories.COMPUTER_GRAPHICS],
         color: "#8DC2E9",
         createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL],
@@ -71,7 +74,7 @@ const projects: IProject[] = [
     {
         id: 6,
         title: "Space Animation",
-        img: ['final_animation1.png', 'final_animation2.png', 'final_animation3.png'],
+        img: ['final_animation1.png', 'final_animation3.png'],
         filter: [FilterCategories.COMPUTER_GRAPHICS],
         color: "#FACA85",
         createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL],
@@ -85,7 +88,7 @@ const projects: IProject[] = [
         img: ['vss.jpeg'],
         filter: [FilterCategories.ANDROID, FilterCategories.DESIGN],
         color: "#83c9b3",
-        createdWith: [CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN],
+        createdWith: [CreatedWith.FIGMA, CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN],
         mobile: true,
         description: "Hej!",
         accWords: []
@@ -96,7 +99,7 @@ const projects: IProject[] = [
         img: ['thirty.png'],
         filter: [FilterCategories.DESIGN, FilterCategories.ANDROID],
         color: "#f5b895",
-        createdWith: [CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN],
+        createdWith: [CreatedWith.FIGMA, CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN],
         mobile: true,
         description: "Hej!",
         accWords: []
@@ -107,7 +110,7 @@ const projects: IProject[] = [
         img: ['placeholder.png'],
         filter: [FilterCategories.DESIGN, FilterCategories.REACT],
         color: "#dc9ede",
-        createdWith: [CreatedWith.REACT, CreatedWith.FRAMER_MOTION],
+        createdWith: [CreatedWith.FIGMA, CreatedWith.REACT, CreatedWith.FRAMER_MOTION],
         mobile: false,
         description: "Hej!",
         accWords: []
@@ -240,6 +243,14 @@ createdWithInfo.set(
         title: 'Typescript',
         img: 'typescript.png',
         link: 'https://www.typescriptlang.org/'
+    }
+)
+createdWithInfo.set(
+    CreatedWith.JAVA_SCRIPT,
+    {
+        title: 'Java Script',
+        img: 'javascript.svg',
+        link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
     }
 )
 
