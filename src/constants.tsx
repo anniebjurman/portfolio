@@ -49,7 +49,7 @@ const projects: IProject[] = [
     {
         id: 7,
         title: "The Maze Game",
-        img: ['maze2.png'],
+        img: ['maze_game1.png', 'maze_game2.png', 'maze_game3.png'],
         filter: [FilterCategories.COMPUTER_GRAPHICS],
         color: "#8DC2E9",
         createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL],
@@ -70,8 +70,8 @@ const projects: IProject[] = [
     },
     {
         id: 6,
-        title: "OpenGL animation",
-        img: ['animation1.png'],
+        title: "Space Animation",
+        img: ['final_animation1.png', 'final_animation2.png', 'final_animation3.png'],
         filter: [FilterCategories.COMPUTER_GRAPHICS],
         color: "#FACA85",
         createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL],

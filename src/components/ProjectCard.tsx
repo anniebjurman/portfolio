@@ -16,9 +16,9 @@ function ProjectCard(props: any) {
             whileHover={{ scale: 1.1 }}
         >
             <Link to={"/project"} state={{ project: p, scrollPos: sp }} style={{ textDecoration: 'none' }}>
-                <div className='cardImgCont' style={{ backgroundColor: p.color }}>
-                    <img className='cardImage' src={imagePath} alt="" />
-                </div>
+                {/* <div className='cardImgCont' style={{ backgroundColor: p.color }}> */}
+                <img className='cardImage' src={imagePath} alt="" />
+                {/* </div> */}
                 <h2>{p.title}</h2>
             </Link>
         </motion.div>

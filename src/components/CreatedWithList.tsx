@@ -18,7 +18,7 @@ function CreatedWithList(props: any) {
         })
         setCreatedWith(cwList)
 
-    }, [props.createdWith, props.accColor])
+    }, [props.createdWith, props.color])
 
     return (
         <div className="outerCont">
