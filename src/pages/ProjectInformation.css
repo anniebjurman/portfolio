@@ -7,21 +7,20 @@
 }
 
 .projTitle {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    gap: 15px;
+}
+
+.githubArrowCont {
+    display: flex;
 }
 
 .projectTitle {
     font-size: 2.5em;
-}
-
-.icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.icons img:hover {
-    cursor: pointer;
 }
 
 .i {
@@ -31,7 +30,7 @@
 .desciption {
     font-size: 0.9em;
     line-height: 20px;
-    width: 47%;
+    width: 50%;
 }
 
 .cwContainer {
@@ -84,6 +83,7 @@
     /* For mobile phones: */
     .container {
         padding: 3% 5%;
+        padding-bottom: 15%;
     }
 
     .projectTitle {
@@ -98,5 +98,23 @@
     .mobile {
         height: 300px;
         width: 140px;
+    }
+
+    .infoContainer {
+        flex-direction: column;
+    }
+
+    .desciption {
+        font-size: 0.8em;
+        line-height: 20px;
+        width: 100%;
+    }
+
+    .cwContainer {
+        padding: 10px 15px;
+    }
+
+    .cwOuterContainer {
+        width: 93%;
     }
   }

@@ -5,6 +5,7 @@ import CreatedWithList from '../components/CreatedWithList';
 import { IProject } from '../interfaces';
 import { useEffect } from 'react';
 import { BackIcon, GithubIcon } from '../icons';
+import AnimateArrow from '../components/AnimateArrow';
 
 function ProjectInformation(props: any) {
     const location = useLocation()
@@ -22,31 +23,23 @@ function ProjectInformation(props: any) {
             exit={{ opacity: 0 }}
         >
             <div className='container'>
-                <div className='icons'>
-                    <Link to={'/'} state={{ scrollPos: scrollPos }}>
-                        <motion.div
-                            className='i'
-                            whileHover={{ scale: 1.2 }}
-                            transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                        >
-                            {BackIcon(iconColor)}
-                        </motion.div>
-                    </Link>
-                    <a href='https://github.com/anniebjurman'
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <motion.div
-                            className='i'
-                            whileHover={{ scale: 1.2 }}
-                            transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                        >
-                            {GithubIcon(iconColor)}
-                        </motion.div>
-                    </a>
-                </div>
                 <div className='projTitle'>
                     <h1 className='projectTitle'>{project.title}</h1>
+                    <div className='githubArrowCont'>
+                        <AnimateArrow color={project.color} text="Check it out!" />
+                        <a href='https://github.com/anniebjurman'
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <motion.div
+                                className='i'
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                            >
+                                {GithubIcon(iconColor)}
+                            </motion.div>
+                        </a>
+                    </div>
                 </div>
                 <div className='infoContainer'>
                     <div className='cwOuterContainer'>

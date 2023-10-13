@@ -77,7 +77,7 @@ const projects: IProject[] = [
         img: ['final_animation1.png', 'final_animation3.png'],
         filter: [FilterCategories.COMPUTER_GRAPHICS],
         color: "#FACA85",
-        createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL],
+        createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL, CreatedWith.BLENDER],
         mobile: false,
         description: "Hej!",
         accWords: []

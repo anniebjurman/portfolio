@@ -8,14 +8,16 @@
   display: flex;
   justify-content:flex-start;
   column-gap: 40px;
-  row-gap: 60px;
+  row-gap: 40px;
   flex-wrap: wrap;
   margin-top: 40px;
 }
 
 .header {
-  display: grid;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: 150px;
 }
 
 h1 {

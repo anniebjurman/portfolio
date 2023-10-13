@@ -23,11 +23,11 @@ function Home() {
   useEffect(() => {
     setThings();
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    // window.addEventListener('scroll', handleScroll, { passive: true });
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    // return () => {
+    //   window.removeEventListener('scroll', handleScroll);
+    // };
   }, []);
 
   const setThings = () => {
@@ -39,9 +39,9 @@ function Home() {
     // window.scrollTo(0, scrollPos)
   }
 
-  const handleScroll = () => {
-    setScrollPosition(window.scrollY);
-  };
+  // const handleScroll = () => {
+  //   setScrollPosition(window.scrollY);
+  // };
 
   return (
     <div className="base">

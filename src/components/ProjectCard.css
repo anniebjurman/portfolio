@@ -1,6 +1,6 @@
 .cardImage {
-  width: 170px;
-  height: 290px;
+  width: 180px;
+  height: 300px;
   object-fit: cover;
   box-shadow: 2px 4px 10px rgb(0 0 0 / 0.2);
 }
@@ -10,24 +10,9 @@ h2 {
   color: black;
 }
 
-/* .cardImgCont {
-  width: 180px;
-  height: 280px;
-  box-shadow: 2px 4px 10px rgb(0 0 0 / 0.2);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 @media only screen and (max-width: 768px) {
   .cardImage {
     width: 150px;
     height: 240px;
   }
-
-  /* .cardImgCont {
-    width: 150px;
-    height: 240px;
-  } */
 }
