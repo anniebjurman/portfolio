@@ -25,21 +25,7 @@ function ProjectInformation(props: any) {
             <div className='container'>
                 <div className='projTitle'>
                     <h1 className='projectTitle'>{project.title}</h1>
-                    <div className='githubArrowCont'>
-                        <AnimateArrow color={project.color} text="Check it out!" />
-                        <a href='https://github.com/anniebjurman'
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <motion.div
-                                className='i'
-                                whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                            >
-                                {GithubIcon(iconColor)}
-                            </motion.div>
-                        </a>
-                    </div>
+                    {getGithubLinkElement(project, iconColor)}
                 </div>
                 <div className='infoContainer'>
                     <div className='cwOuterContainer'>
@@ -54,6 +40,30 @@ function ProjectInformation(props: any) {
             </div>
         </motion.div>
     )
+}
+
+function getGithubLinkElement(p: IProject, iconColor: string): JSX.Element {
+    if (p.github) {
+        return (
+            <div className='githubArrowCont'>
+                <AnimateArrow color={"black"} text="Check it out!" />
+                <a href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <motion.div
+                        className='i'
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                    >
+                        {GithubIcon(iconColor)}
+                    </motion.div>
+                </a>
+            </div>
+        )
+    } else {
+        return <></>
+    }
 }
 
 function getImgElement(p: IProject): JSX.Element {
@@ -92,7 +102,10 @@ function getDescriptionElement(p: IProject): JSX.Element {
     let i = 0;
     while (i < words.length) {
         if (words[i] == "\n") {
-            res.push(<br></br>)
+            res.push(<>
+                <br></br><br></br>
+            </>
+            )
         } else if (p.accWords.includes(words[i])) {
             res.push(<span style={{ fontWeight: 'bold' }} key={i}>{words[i] + " "}</span>)
         } else {

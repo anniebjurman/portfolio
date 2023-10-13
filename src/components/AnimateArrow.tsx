@@ -10,6 +10,7 @@ function AnimateArrow(props: {color: string, text: string}) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
+                    delay: 2,
                     duration: .7,
                     ease: "easeIn",
                 }}
@@ -27,7 +28,7 @@ function AnimateArrow(props: {color: string, text: string}) {
                         transition={{
                             duration: 2,
                             ease: "easeInOut",
-                            delay: .9
+                            delay: 2.9
                         }}
                         strokeWidth={2}
                         stroke={props.color}

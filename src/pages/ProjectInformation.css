@@ -11,8 +11,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 120px;
-    gap: 15px;
+    height: fit-content;
 }
 
 .githubArrowCont {
@@ -21,6 +20,7 @@
 
 .projectTitle {
     font-size: 2.5em;
+    max-width: 80%;
 }
 
 .i {

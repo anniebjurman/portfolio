@@ -6,7 +6,7 @@
     padding: 0;
   }
 
-  .arrowContainer {
+.arrowContainer {
     width: 90px;
     height: 100%;
     display: flex;
@@ -19,4 +19,13 @@
     line-height: 1px;
     font-weight: bold;
     margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  .arrowContainer {
+    display: none;
+  }
+
 }

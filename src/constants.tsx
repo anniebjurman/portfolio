@@ -10,33 +10,27 @@ const projects: IProject[] = [
         color: "#9DCA7C",
         createdWith: [CreatedWith.ADOBE_XD],
         mobile: true,
-        description: `Framtagande av en designlösning för mobila enheter för Trimmas (nuvarande Twoday) produkt Insikt.
-                    Detta genomfördes i grupp under kursen “DBT” på Umeå Universitet vårterminen 2022. \n 
-                    Det arbetades nära kunder och utfördes användaretester på designen för att få den så bra 
-                    som möjligt.`,
-        accWords: ['designlösning', 'grupp', 'vårterminen', '2022.', 'användaretester']
-    },
-    {
-        id: 2,
-        title: "NASA Space app Challenge",
-        img: ['nasa.png', 'nasa2.png'],
-        filter: [FilterCategories.DESIGN, FilterCategories.ANGULAR],
-        color: "#CD93B0",
-        createdWith: [CreatedWith.HTML, CreatedWith.CSS, CreatedWith.JAVA_SCRIPT],
-        mobile: false,
-        description: "Hej!",
-        accWords: []
+        description: `During the course "Design-Build-Test, project course
+         for engineers" at Umeå University (spring semester 2022), me and my
+          group created a design solution for mobile devices for the digital
+           desktop product INSIKT (today owned by Twoday). \n This work was carried
+            out in groups, and was a close collaboration with the people at
+             Trimma (the then owner). The whole design process, from sketches
+              to a clickable prototype, was performed.`,
+        accWords: ['(spring','semester', '2022),', '"Design-Build-Test,', 'design', 'solution', 'groups,'],
+        github: null
     },
     // {
-    //     id: 3,
-    //     title: "Hackon",
-    //     img: ['hackaton1.png'],
-    //     filter: [FilterCategories.DESIGN],
-    //     color: "#8fdba9",
-    //     createdWith: [CreatedWith.ADOBE_XD],
-    //     mobile: true,
+    //     id: 2,
+    //     title: "NASA Space app Challenge",
+    //     img: ['nasa.png', 'nasa2.png'],
+    //     filter: [FilterCategories.DESIGN, FilterCategories.ANGULAR],
+    //     color: "#CD93B0",
+    //     createdWith: [CreatedWith.HTML, CreatedWith.CSS, CreatedWith.JAVA_SCRIPT],
+    //     mobile: false,
     //     description: "Hej!",
-    //     accWords: []
+    //     accWords: [],
+    //     github: null
     // },
     {
         id: 4,
@@ -46,8 +40,10 @@ const projects: IProject[] = [
         color: "#B5B8FA",
         createdWith: [CreatedWith.FIGMA, CreatedWith.REACT_NATIVE],
         mobile: true,
-        description: "Hej!",
-        accWords: []
+        description: `The course “Teknik för sociala medier” (Umeå University) is a collaboration with a university in Australia. During the spring semester 2023, I together with tree others developed an app for early teenagers in Australia. The app focused on improving mental health and giving young people a fun way to work on their insecurities or or in a de-dramatized way talk to a psychologist.
+        \n Before the development of the app started, we got to take part of a preliminary investigation done by the students in Australia. Later the entire design process were carried out followed by the development of the app.`,
+        accWords: ['spring', 'semester', '2023,', 'tree', 'others', 'mental', 'health', 'design', 'process'],
+        github: 'https://github.com/anniebjurman/TFSM_project/tree/main'
     },
     {
         id: 7,
@@ -57,8 +53,9 @@ const projects: IProject[] = [
         color: "#8DC2E9",
         createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL],
         mobile: false,
-        description: "Hej!",
-        accWords: []
+        description: `During my exchange studies in Reykjavik, Iceland I took a course in Computer Graphics, where this game where developed. \n The goal of the game is to navigating the maze and find three red pyramids before the time runs out. The game is written i Python and uses the pipeline of Open GL.`,
+        accWords: ['exchange', 'studies', 'Computer', 'Graphics', 'Python', 'Open', 'GL.'],
+        github: 'https://github.com/anniebjurman/CG_maze_game'
     },
     {
         id: 5,
@@ -68,8 +65,9 @@ const projects: IProject[] = [
         color: "#CDAD58",
         createdWith: [CreatedWith.ADOBE_XD],
         mobile: false,
-        description: "Hej!",
-        accWords: []
+        description: ``,
+        accWords: [],
+        github: null
     },
     {
         id: 6,
@@ -79,8 +77,9 @@ const projects: IProject[] = [
         color: "#FACA85",
         createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL, CreatedWith.BLENDER],
         mobile: false,
-        description: "Hej!",
-        accWords: []
+        description: ``,
+        accWords: [],
+        github: null
     },
     {
         id: 8,
@@ -90,8 +89,9 @@ const projects: IProject[] = [
         color: "#83c9b3",
         createdWith: [CreatedWith.FIGMA, CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN],
         mobile: true,
-        description: "Hej!",
-        accWords: []
+        description: ``,
+        accWords: [],
+        github: null
     },
     {
         id: 9,
@@ -101,8 +101,9 @@ const projects: IProject[] = [
         color: "#f5b895",
         createdWith: [CreatedWith.FIGMA, CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN],
         mobile: true,
-        description: "Hej!",
-        accWords: []
+        description: ``,
+        accWords: [],
+        github: null
     },
     {
         id: 10,
@@ -112,8 +113,9 @@ const projects: IProject[] = [
         color: "#dc9ede",
         createdWith: [CreatedWith.FIGMA, CreatedWith.REACT, CreatedWith.FRAMER_MOTION],
         mobile: false,
-        description: "Hej!",
-        accWords: []
+        description: ``,
+        accWords: [],
+        github: null
     }
 ]
 

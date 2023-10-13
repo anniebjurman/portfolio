@@ -1,38 +1,81 @@
 import { useEffect } from "react";
 import "./Filter.css";
 import { FilterCategories } from "../enums";
+import { motion } from "framer-motion";
 
 function Filter(props: any) {
 
-    useEffect(() => {
-        if (props.activeFilter === FilterCategories.ALL) {
-            props.setFiltered(props.projects);
-            return;
-        }
+        useEffect(() => {
+                if (props.activeFilter === FilterCategories.ALL) {
+                        props.setFiltered(props.projects);
+                        return;
+                }
 
-        const filtered = props.projects.filter((p : any) => p.filter.includes(props.activeFilter));
-        props.setFiltered(filtered);
+                const filtered = props.projects.filter((p: any) => p.filter.includes(props.activeFilter));
+                props.setFiltered(filtered);
 
-    }, [props.activeFilter])
+        }, [props.activeFilter])
 
-    return (
-        <div className="filter-container">
-            <button className={props.activeFilter === FilterCategories.ALL ? "active" : ''}
-                    onClick={() => props.setActiveFilter(FilterCategories.ALL)}>all</button>
-            <button className={props.activeFilter === FilterCategories.DESIGN ? "active" : ''}
-                    onClick={() => props.setActiveFilter(FilterCategories.DESIGN)}>design</button>
-            <button className={props.activeFilter === FilterCategories.REACT ? "active" : ''}
-                    onClick={() => props.setActiveFilter(FilterCategories.REACT)}>react</button>
-            <button className={props.activeFilter === FilterCategories.ANGULAR ? "active" : ''}
-                    onClick={() => props.setActiveFilter(FilterCategories.ANGULAR)}>angular</button>
-            <button className={props.activeFilter === FilterCategories.REACT_NATIVE ? "active" : ''}
-                    onClick={() => props.setActiveFilter(FilterCategories.REACT_NATIVE)}>react native</button>
-            <button className={props.activeFilter === FilterCategories.COMPUTER_GRAPHICS ? "active" : ''}
-                    onClick={() => props.setActiveFilter(FilterCategories.COMPUTER_GRAPHICS)}>computer graphics</button>
-            <button className={props.activeFilter === FilterCategories.ANDROID ? "active" : ''}
-                    onClick={() => props.setActiveFilter(FilterCategories.ANDROID)}>android</button>
-        </div>
-    )
+        return (
+                <div className="filter-container">
+                        <motion.button
+                                className={props.activeFilter === FilterCategories.ALL ? "active" : ''}
+                                onClick={() => props.setActiveFilter(FilterCategories.ALL)}
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        >
+                                all
+                        </motion.button>
+                        <motion.button
+                                className={props.activeFilter === FilterCategories.DESIGN ? "active" : ''}
+                                onClick={() => props.setActiveFilter(FilterCategories.DESIGN)}
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        >
+                                design
+                        </motion.button>
+                        <motion.button
+                                className={props.activeFilter === FilterCategories.REACT ? "active" : ''}
+                                onClick={() => props.setActiveFilter(FilterCategories.REACT)}
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        >
+                                react
+                        </motion.button>
+                        <motion.button
+                                className={props.activeFilter === FilterCategories.ANGULAR ? "active" : ''}
+                                onClick={() => props.setActiveFilter(FilterCategories.ANGULAR)}
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        >
+                                angular
+                        </motion.button>
+                        <motion.button
+                                className={props.activeFilter === FilterCategories.REACT_NATIVE ? "active" : ''}
+                                onClick={() => props.setActiveFilter(FilterCategories.REACT_NATIVE)}
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        >
+                                react native
+                        </motion.button>
+                        <motion.button
+                                className={props.activeFilter === FilterCategories.COMPUTER_GRAPHICS ? "active" : ''}
+                                onClick={() => props.setActiveFilter(FilterCategories.COMPUTER_GRAPHICS)}
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        >
+                                computer graphics
+                        </motion.button>
+                        <motion.button
+                                className={props.activeFilter === FilterCategories.ANDROID ? "active" : ''}
+                                onClick={() => props.setActiveFilter(FilterCategories.ANDROID)}
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        >
+                                android
+                        </motion.button>
+                </div>
+        )
 }
 
 export default Filter;

@@ -16,6 +16,7 @@ interface IProject {
   mobile: boolean;
   description: string;
   accWords: string[];
+  github: string | null;
 }
 
 export type {IProject, ICreatedWith}
