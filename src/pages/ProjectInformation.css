@@ -35,7 +35,7 @@
 
 .cwContainer {
     width: 100%;
-    height: fit-content;
+    height: 75%;
     box-shadow: inset 2px 4px 10px rgb(0 0 0 / 0.2);
     padding: 15px 23px;
 }

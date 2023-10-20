@@ -20,18 +20,6 @@ const projects: IProject[] = [
         accWords: ['(spring','semester', '2022),', '"Design-Build-Test,', 'design', 'solution', 'groups,'],
         github: null
     },
-    // {
-    //     id: 2,
-    //     title: "NASA Space app Challenge",
-    //     img: ['nasa.png', 'nasa2.png'],
-    //     filter: [FilterCategories.DESIGN, FilterCategories.ANGULAR],
-    //     color: "#CD93B0",
-    //     createdWith: [CreatedWith.HTML, CreatedWith.CSS, CreatedWith.JAVA_SCRIPT],
-    //     mobile: false,
-    //     description: "Hej!",
-    //     accWords: [],
-    //     github: null
-    // },
     {
         id: 4,
         title: "Mind Mentor",
@@ -40,9 +28,9 @@ const projects: IProject[] = [
         color: "#B5B8FA",
         createdWith: [CreatedWith.FIGMA, CreatedWith.REACT_NATIVE],
         mobile: true,
-        description: `The course “Teknik för sociala medier” (Umeå University) is a collaboration with a university in Australia. During the spring semester 2023, I together with tree others developed an app for early teenagers in Australia. The app focused on improving mental health and giving young people a fun way to work on their insecurities or or in a de-dramatized way talk to a psychologist.
-        \n Before the development of the app started, we got to take part of a preliminary investigation done by the students in Australia. Later the entire design process were carried out followed by the development of the app.`,
-        accWords: ['spring', 'semester', '2023,', 'tree', 'others', 'mental', 'health', 'design', 'process'],
+        description: `The course “Teknik för sociala medier” (Umeå University) is a collaboration with a university in Australia. During the spring semester 2023, I together with my group developed an app for early teenagers in Australia. The app focused on improving mental health and giving young people a fun way to work on their insecurities or or in a de-dramatized way talk to a psychologist.
+        \n We got to take part of a preliminary investigation done by the students in Australia. Later the entire design process were carried out followed by the development of the app.`,
+        accWords: ['spring', 'semester', '2023,', 'group', 'design', 'process', 'development'],
         github: 'https://github.com/anniebjurman/TFSM_project/tree/main'
     },
     {
@@ -53,9 +41,21 @@ const projects: IProject[] = [
         color: "#8DC2E9",
         createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL],
         mobile: false,
-        description: `During my exchange studies in Reykjavik, Iceland I took a course in Computer Graphics, where this game where developed. \n The goal of the game is to navigating the maze and find three red pyramids before the time runs out. The game is written i Python and uses the pipeline of Open GL.`,
-        accWords: ['exchange', 'studies', 'Computer', 'Graphics', 'Python', 'Open', 'GL.'],
+        description: `During my exchange studies in Reykjavik (Iceland) I took a course in Computer Graphics, where this game where developed. \n The goal of the game is to navigating the maze and find three red pyramids before the time runs out. The game is written i Python and uses the pipeline of Open GL.`,
+        accWords: ['exchange', 'studies', 'Computer', 'Graphics,', 'Python', 'Open', 'GL.'],
         github: 'https://github.com/anniebjurman/CG_maze_game'
+    },
+    {
+        id: 8,
+        title: "Vad säger systemet?",
+        img: ['vss0.jpg', 'vss1.jpg', 'vss3.jpg', 'vss4.jpg'],
+        filter: [FilterCategories.ANDROID],
+        color: "#83c9b3",
+        createdWith: [CreatedWith.FIGMA, CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN, CreatedWith.FIREBASE],
+        mobile: true,
+        description: ``,
+        accWords: [],
+        github: null
     },
     {
         id: 5,
@@ -65,8 +65,8 @@ const projects: IProject[] = [
         color: "#CDAD58",
         createdWith: [CreatedWith.ADOBE_XD],
         mobile: false,
-        description: ``,
-        accWords: [],
+        description: `During the spring semester 2020 I took the course "Design for user experience". The final project was about creating a prototype of a digital product home for Västerbottensost. We learned about how they work and what they think is important for the customer, and also about the whole design process. This prototype is my group's solution to the task.`,
+        accWords: ['group\'s', 'digital', 'product', 'home', 'design', 'process', 'prototype'],
         github: null
     },
     {
@@ -77,27 +77,15 @@ const projects: IProject[] = [
         color: "#FACA85",
         createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL, CreatedWith.BLENDER],
         mobile: false,
-        description: ``,
-        accWords: [],
-        github: null
-    },
-    {
-        id: 8,
-        title: "Vad säger systemet?",
-        img: ['vss.jpeg'],
-        filter: [FilterCategories.ANDROID, FilterCategories.DESIGN],
-        color: "#83c9b3",
-        createdWith: [CreatedWith.FIGMA, CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN],
-        mobile: true,
-        description: ``,
-        accWords: [],
+        description: `During my exchange studies in Reykjavik (Iceland) I took a course in Computer Graphics, where this animation where developed as the final project. \n The animation takes place in space where two people are stranded on a small platform. There are no sound, instead it works with light and gestures to tell the story. The animation is written i Python and uses the pipeline of Open GL. The objects shown is created in Blender.`,
+        accWords: ['exchange', 'studies', 'Computer', 'Graphics,', 'Python', 'Open', 'GL.', 'Blender.'],
         github: null
     },
     {
         id: 9,
         title: "Thirty",
-        img: ['thirty.png'],
-        filter: [FilterCategories.DESIGN, FilterCategories.ANDROID],
+        img: ['thirty1.jpg', 'thirty2.jpg', 'thirty3.jpg', 'thirty4.jpg'],
+        filter: [FilterCategories.ANDROID],
         color: "#f5b895",
         createdWith: [CreatedWith.FIGMA, CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN],
         mobile: true,
@@ -108,13 +96,13 @@ const projects: IProject[] = [
     {
         id: 10,
         title: "Portfolio",
-        img: ['placeholder.png'],
+        img: ['portfolio1.png', 'portfolio2.png'],
         filter: [FilterCategories.DESIGN, FilterCategories.REACT],
         color: "#dc9ede",
-        createdWith: [CreatedWith.FIGMA, CreatedWith.REACT, CreatedWith.FRAMER_MOTION],
+        createdWith: [CreatedWith.FIGMA, CreatedWith.REACT, CreatedWith.FRAMER_MOTION, CreatedWith.TYPESCRIPT],
         mobile: false,
-        description: ``,
-        accWords: [],
+        description: `This portfolio was developed during summer 2023 with the purpose to showcase my different projects. A prototype was first made in Figma and later developed with React (Typescript) and Framer Motion.`,
+        accWords: ['Figma', 'React', 'Framer', 'Motion.'],
         github: null
     }
 ]
