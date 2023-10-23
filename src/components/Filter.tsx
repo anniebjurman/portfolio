@@ -42,14 +42,14 @@ function Filter(props: any) {
                         >
                                 react
                         </motion.button>
-                        <motion.button
+                        {/* <motion.button
                                 className={props.activeFilter === FilterCategories.ANGULAR ? "active" : ''}
                                 onClick={() => props.setActiveFilter(FilterCategories.ANGULAR)}
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
                         >
                                 angular
-                        </motion.button>
+                        </motion.button> */}
                         <motion.button
                                 className={props.activeFilter === FilterCategories.REACT_NATIVE ? "active" : ''}
                                 onClick={() => props.setActiveFilter(FilterCategories.REACT_NATIVE)}
