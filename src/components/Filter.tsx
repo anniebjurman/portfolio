@@ -14,7 +14,7 @@ function Filter(props: any) {
                 const filtered = props.projects.filter((p: any) => p.filter.includes(props.activeFilter));
                 props.setFiltered(filtered);
 
-        }, [props.activeFilter])
+        }, [props])
 
         return (
                 <div className="filter-container">

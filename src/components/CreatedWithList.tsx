@@ -15,6 +15,7 @@ function CreatedWithList(props: any) {
             if (info) {
                 cwList.push(info)
             }
+            return true
         })
         setCreatedWith(cwList)
 

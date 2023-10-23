@@ -13,7 +13,7 @@ function Home() {
   const [projects, setProjects] = useState<IProject[]>([]);
   const [filtered, setFiltered] = useState<IProject[]>([]);
   const [activeFilter, setActiveFilter] = useState(FilterCategories.ALL);
-  const [scrollPosition, setScrollPosition] = useState(0);
+  // const [scrollPosition, setScrollPosition] = useState(0);
   const iconColor = "#000"
 
   // get previous scroll position
@@ -90,7 +90,7 @@ function Home() {
       <motion.div layout className='projects'>
         <AnimatePresence>
           {filtered.map(p => {
-            return <ProjectCard key={p.id} project={p} scrollPos={scrollPosition}/>
+            return <ProjectCard key={p.id} project={p}/> // scrollPos={scrollPosition}
           })}
         </AnimatePresence>
       </motion.div>

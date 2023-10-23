@@ -1,15 +1,15 @@
 import './ProjectInformation.css';
 import { motion } from "framer-motion";
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import CreatedWithList from '../components/CreatedWithList';
 import { IProject } from '../interfaces';
 import { useEffect } from 'react';
-import { BackIcon, GithubIcon } from '../icons';
+import { GithubIcon } from '../icons';
 import AnimateArrow from '../components/AnimateArrow';
 
 function ProjectInformation(props: any) {
     const location = useLocation()
-    const { project, scrollPos } = location.state
+    const { project } = location.state //scrollPos
     const iconColor = "#000"
 
     useEffect(() => {
@@ -101,7 +101,7 @@ function getDescriptionElement(p: IProject): JSX.Element {
 
     let i = 0;
     while (i < words.length) {
-        if (words[i] == "\n") {
+        if (words[i] === "\n") {
             res.push(<>
                 <br></br><br></br>
             </>
