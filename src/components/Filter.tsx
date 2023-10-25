@@ -22,7 +22,6 @@ function Filter(props: any) {
                                 className={props.activeFilter === FilterCategories.ALL ? "active" : ''}
                                 onClick={() => props.setActiveFilter(FilterCategories.ALL)}
                                 whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
                         >
                                 all
                         </motion.button>
@@ -30,7 +29,6 @@ function Filter(props: any) {
                                 className={props.activeFilter === FilterCategories.DESIGN ? "active" : ''}
                                 onClick={() => props.setActiveFilter(FilterCategories.DESIGN)}
                                 whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
                         >
                                 design
                         </motion.button>
@@ -38,23 +36,13 @@ function Filter(props: any) {
                                 className={props.activeFilter === FilterCategories.REACT ? "active" : ''}
                                 onClick={() => props.setActiveFilter(FilterCategories.REACT)}
                                 whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
                         >
                                 react
                         </motion.button>
-                        {/* <motion.button
-                                className={props.activeFilter === FilterCategories.ANGULAR ? "active" : ''}
-                                onClick={() => props.setActiveFilter(FilterCategories.ANGULAR)}
-                                whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                        >
-                                angular
-                        </motion.button> */}
                         <motion.button
                                 className={props.activeFilter === FilterCategories.REACT_NATIVE ? "active" : ''}
                                 onClick={() => props.setActiveFilter(FilterCategories.REACT_NATIVE)}
                                 whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
                         >
                                 react native
                         </motion.button>
@@ -62,7 +50,6 @@ function Filter(props: any) {
                                 className={props.activeFilter === FilterCategories.COMPUTER_GRAPHICS ? "active" : ''}
                                 onClick={() => props.setActiveFilter(FilterCategories.COMPUTER_GRAPHICS)}
                                 whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
                         >
                                 computer graphics
                         </motion.button>
@@ -70,7 +57,6 @@ function Filter(props: any) {
                                 className={props.activeFilter === FilterCategories.ANDROID ? "active" : ''}
                                 onClick={() => props.setActiveFilter(FilterCategories.ANDROID)}
                                 whileHover={{ scale: 1.1 }}
-                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
                         >
                                 android
                         </motion.button>

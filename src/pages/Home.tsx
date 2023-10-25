@@ -7,41 +7,21 @@ import { FilterCategories } from '../enums'
 import { IProject } from '../interfaces';
 import { projects as proj } from '../constants';
 import { DarkModeIcon, GithubIcon, LinkedInIcon } from '../icons';
-// import { useLocation } from 'react-router-dom';
 
 function Home() {
   const [projects, setProjects] = useState<IProject[]>([]);
   const [filtered, setFiltered] = useState<IProject[]>([]);
   const [activeFilter, setActiveFilter] = useState(FilterCategories.ALL);
-  // const [scrollPosition, setScrollPosition] = useState(0);
   const iconColor = "#000"
-
-  // get previous scroll position
-  // const location = useLocation()
-  // const { scrollPos } = location.state
 
   useEffect(() => {
     setThings();
-
-    // window.addEventListener('scroll', handleScroll, { passive: true });
-
-    // return () => {
-    //   window.removeEventListener('scroll', handleScroll);
-    // };
   }, []);
 
   const setThings = () => {
     setProjects(proj);
     setFiltered(proj);
-
-    // TODO: Fix scroll pos
-    // console.log("sp", scrollPos)
-    // window.scrollTo(0, scrollPos)
   }
-
-  // const handleScroll = () => {
-  //   setScrollPosition(window.scrollY);
-  // };
 
   return (
     <div className="base">
@@ -50,7 +30,6 @@ function Home() {
           <motion.div
             className='icon'
             whileHover={{ scale: 1.2 }}
-            transition={{ type: "spring", stiffness: 300, damping: 10 }}
           >
             {DarkModeIcon(iconColor)}
           </motion.div>
@@ -63,7 +42,6 @@ function Home() {
             <motion.div
               className='icon'
               whileHover={{ scale: 1.2 }}
-              transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
               {LinkedInIcon(iconColor)}
             </motion.div>
@@ -75,7 +53,6 @@ function Home() {
             <motion.div
               className='icon'
               whileHover={{ scale: 1.2 }}
-              transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
               {GithubIcon(iconColor)}
             </motion.div>
@@ -90,7 +67,7 @@ function Home() {
       <motion.div layout className='projects'>
         <AnimatePresence>
           {filtered.map(p => {
-            return <ProjectCard key={p.id} project={p}/> // scrollPos={scrollPosition}
+            return <ProjectCard key={p.id} project={p}/>
           })}
         </AnimatePresence>
       </motion.div>

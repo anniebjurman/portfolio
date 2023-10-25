@@ -6,10 +6,11 @@ import { IProject } from '../interfaces';
 import { useEffect } from 'react';
 import { GithubIcon } from '../icons';
 import AnimateArrow from '../components/AnimateArrow';
+import ZoomImage from '../components/ZoomImage';
 
 function ProjectInformation(props: any) {
     const location = useLocation()
-    const { project } = location.state //scrollPos
+    const { project } = location.state
     const iconColor = "#000"
 
     useEffect(() => {
@@ -92,7 +93,6 @@ function getImgElement(p: IProject): JSX.Element {
     }
 
     return <div className='imgContainer'>{res}</div>
-
 }
 
 function getDescriptionElement(p: IProject): JSX.Element {
