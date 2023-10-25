@@ -6,7 +6,6 @@ import { IProject } from '../interfaces';
 import { useEffect } from 'react';
 import { GithubIcon } from '../icons';
 import AnimateArrow from '../components/AnimateArrow';
-import ZoomImage from '../components/ZoomImage';
 
 function ProjectInformation(props: any) {
     const location = useLocation()
