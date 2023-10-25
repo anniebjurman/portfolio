@@ -84,7 +84,7 @@ function getImgElement(p: IProject): JSX.Element {
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", bounce: 0.5, }}
                 className={cn}
-                src={"../images/" + p.img[i]}
+                src={"./images/" + p.img[i]}
                 alt='TODO' key={i}
             />
         )
