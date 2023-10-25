@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function ProjectCard(props: any) {
     let p = props.project
     let sp = props.scrollPos
-    let imagePath: string = "../images/" + p.img[0]
+    let imagePath: string = "./images/" + p.img[0]
 
     return (
         <motion.div
