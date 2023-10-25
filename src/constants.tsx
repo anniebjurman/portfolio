@@ -4,7 +4,7 @@ import { ICreatedWith, IProject } from "./interfaces"
 const projects: IProject[] = [
     {
         id: 0,
-        title: "Trimma INSIKT",
+        title: "Mobile design of INSIKT",
         img: ['insikt.png', 'insikt3.png', 'insikt4.png', 'insikt5.png'],
         filter: [FilterCategories.DESIGN],
         color: "#9DCA7C",
@@ -62,7 +62,7 @@ const projects: IProject[] = [
     },
     {
         id: 5,
-        title: "Västerbottensost",
+        title: "Product home for Västerbottensost",
         img: ['vb5.png', 'vb2.png', 'vb3.png', 'vb4.png'],
         filter: [FilterCategories.DESIGN],
         color: "#CDAD58",
