@@ -14,8 +14,12 @@ interface IProject {
   color: string;
   createdWith: CreatedWith[];
   mobile: boolean;
-  description: string;
-  accWords: string[];
+  // description: string;
+  // accWords: string[];
+  what: string,
+  when: string,
+  with_who: string,
+  focus: string,
   github: string | null;
 }
 

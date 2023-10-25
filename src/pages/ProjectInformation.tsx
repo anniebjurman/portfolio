@@ -94,26 +94,49 @@ function getImgElement(p: IProject): JSX.Element {
     return <div className='imgContainer'>{res}</div>
 }
 
+// function getDescriptionElement(p: IProject): JSX.Element {
+//     var res: JSX.Element[] = []
+//     var words = p.description.split(" ")
+
+//     let i = 0;
+//     while (i < words.length) {
+//         if (words[i] === "\n") {
+//             res.push(<>
+//                 <br></br><br></br>
+//             </>
+//             )
+//         } else if (p.accWords.includes(words[i])) {
+//             res.push(<span style={{ fontWeight: 'bold' }} key={i}>{words[i] + " "}</span>)
+//         } else {
+//             res.push(<span key={i}>{words[i] + " "}</span>)
+//         }
+//         i++;
+//     }
+
+//     return <p className='desciption'>{res}</p>
+// }
+
 function getDescriptionElement(p: IProject): JSX.Element {
-    var res: JSX.Element[] = []
-    var words = p.description.split(" ")
-
-    let i = 0;
-    while (i < words.length) {
-        if (words[i] === "\n") {
-            res.push(<>
-                <br></br><br></br>
-            </>
-            )
-        } else if (p.accWords.includes(words[i])) {
-            res.push(<span style={{ fontWeight: 'bold' }} key={i}>{words[i] + " "}</span>)
-        } else {
-            res.push(<span key={i}>{words[i] + " "}</span>)
-        }
-        i++;
-    }
-
-    return <p className='desciption'>{res}</p>
+    return (
+        <div className='desciption'>
+            <p>
+                <span style={{ fontWeight: 'bold' }}>What? </span>
+                {p.what}
+            </p>
+            <p>
+                <span style={{ fontWeight: 'bold' }}>When? </span>
+                {p.when}
+            </p>
+            <p>
+                <span style={{ fontWeight: 'bold' }}>With who? </span>
+                {p.with_who}
+            </p>
+            <p>
+                <span style={{ fontWeight: 'bold' }}>Focus? </span>
+                {p.focus}
+            </p>
+        </div>
+    )
 }
 
 export default ProjectInformation;

@@ -10,14 +10,10 @@ const projects: IProject[] = [
         color: "#9DCA7C",
         createdWith: [CreatedWith.ADOBE_XD],
         mobile: true,
-        description: `During the course "Design-Build-Test, project course
-         for engineers" at Umeå University (spring semester 2022), me and my
-          group created a design solution for mobile devices for the digital
-           desktop product INSIKT (today owned by Twoday). \n This work was carried
-            out in groups, and was a close collaboration with the people at
-             Trimma (the then owner). The whole design process, from sketches
-              to a clickable prototype, was performed.`,
-        accWords: ['(spring','semester', '2022),', '"Design-Build-Test,', 'design', 'solution', 'groups,'],
+        what: `A clickable design prototype for using the digital desktop product INSIKT (today owned by Twoday) on mobile devices.`,
+        when: `Spring semester 2021`,
+        with_who: `A group of four people.`,
+        focus: `How to design user-friendly interfaces for mobile devices.`,
         github: null
     },
     {
@@ -28,9 +24,12 @@ const projects: IProject[] = [
         color: "#B5B8FA",
         createdWith: [CreatedWith.FIGMA, CreatedWith.REACT_NATIVE],
         mobile: true,
-        description: `The course “Teknik för sociala medier” (Umeå University) is a collaboration with a university in Australia. During the spring semester 2023, I together with my group developed an app for early teenagers in Australia. The app focused on improving mental health and giving young people a fun way to work on their insecurities or or in a de-dramatized way talk to a psychologist.
-        \n We got to take part of a preliminary investigation done by the students in Australia. Later the entire design process were carried out followed by the development of the app.`,
-        accWords: ['spring', 'semester', '2023,', 'group', 'design', 'process', 'development'],
+        what: `An app for early teenagers of Australia.
+         The app focused on improving mental health and giving young people a fun way to work on their insecurities or in a de-dramatized way talk to a psychologist.
+          This was carried out as a collaboration with a university in Australia.`,
+        when: `Spring semester 2022.`,
+        with_who: `A group of four people.`,
+        focus: `Collaboration with an external marketing team, the design process and development of the app.`,
         github: 'https://github.com/anniebjurman/TFSM_project/tree/main'
     },
     {
@@ -41,8 +40,10 @@ const projects: IProject[] = [
         color: "#8DC2E9",
         createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL],
         mobile: false,
-        description: `During my exchange studies in Reykjavik (Iceland) I took a course in Computer Graphics, where this game where developed. \n The goal of the game is to navigating the maze and find three red pyramids before the time runs out. The game is written i Python and uses the pipeline of Open GL.`,
-        accWords: ['exchange', 'studies', 'Computer', 'Graphics,', 'Python', 'Open', 'GL.'],
+        what: `A maze game where the goal is to navigating the maze and find three red pyramids before the time runs out.`,
+        when: `During my exchange studies in Reykjavik Iceland (fall semester 2022).`,
+        with_who: `Just me.`,
+        focus: `Understanding computer graphics and the Open GL Pipeline.`,
         github: 'https://github.com/anniebjurman/CG_maze_game'
     },
     {
@@ -53,8 +54,10 @@ const projects: IProject[] = [
         color: "#83c9b3",
         createdWith: [CreatedWith.FIGMA, CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN, CreatedWith.FIREBASE],
         mobile: true,
-        description: ``,
-        accWords: [],
+        what: ``,
+        when: ``,
+        with_who: `Just me.`,
+        focus: ``,
         github: null
     },
     {
@@ -65,8 +68,10 @@ const projects: IProject[] = [
         color: "#CDAD58",
         createdWith: [CreatedWith.ADOBE_XD],
         mobile: false,
-        description: `During the spring semester 2020 I took the course "Design for user experience". The final project was about creating a prototype of a digital product home for Västerbottensost. We learned about how they work and what they think is important for the customer, and also about the whole design process. This prototype is my group's solution to the task.`,
-        accWords: ['group\'s', 'digital', 'product', 'home', 'design', 'process', 'prototype'],
+        what: `A prototype of a digital product home for Västerbottensost`,
+        when: `Spring semester 2020`,
+        with_who: `A group of four people`,
+        focus: `Understanding the company's vision and apply that in the design of the prototype.`,
         github: null
     },
     {
@@ -77,8 +82,10 @@ const projects: IProject[] = [
         color: "#FACA85",
         createdWith: [CreatedWith.PYTHON, CreatedWith.OPENGL, CreatedWith.BLENDER],
         mobile: false,
-        description: `During my exchange studies in Reykjavik (Iceland) I took a course in Computer Graphics, where this animation where developed as the final project. \n The animation takes place in space where two people are stranded on a small platform. There are no sound, instead it works with light and gestures to tell the story. The animation is written i Python and uses the pipeline of Open GL. The objects shown is created in Blender.`,
-        accWords: ['exchange', 'studies', 'Computer', 'Graphics,', 'Python', 'Open', 'GL.', 'Blender.'],
+        what: `A animation that takes place in space where two people are stranded on a small platform.`,
+        when: `During my exchange studies in Reykjavik Iceland (fall semester 2022).`,
+        with_who: `Just me.`,
+        focus: `Understanding computer graphics and the Open GL Pipeline.`,
         github: null
     },
     {
@@ -89,8 +96,10 @@ const projects: IProject[] = [
         color: "#f5b895",
         createdWith: [CreatedWith.FIGMA, CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN],
         mobile: true,
-        description: ``,
-        accWords: [],
+        what: ``,
+        when: ``,
+        with_who: `Just me.`,
+        focus: ``,
         github: null
     },
     {
@@ -101,8 +110,10 @@ const projects: IProject[] = [
         color: "#dc9ede",
         createdWith: [CreatedWith.FIGMA, CreatedWith.REACT, CreatedWith.FRAMER_MOTION, CreatedWith.TYPESCRIPT],
         mobile: false,
-        description: `This portfolio was developed during summer 2023 with the purpose to showcase my different projects. A prototype was first made in Figma and later developed with React (Typescript) and Framer Motion.`,
-        accWords: ['Figma', 'React', 'Framer', 'Motion.'],
+        what: `A portfolio with the purpose to showcase different projects.`,
+        when: `Summer 2023`,
+        with_who: `Just me.`,
+        focus: `Building a simple but well-made website to display different projects, that can easily grow as more projects are developed.`,
         github: null
     }
 ]
