@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.54fd3aef.css",
-    "main.js": "/portfolio/static/js/main.5d723391.js",
+    "main.css": "/portfolio/static/css/main.6aa73761.css",
+    "main.js": "/portfolio/static/js/main.351e1019.js",
     "static/js/787.04485897.chunk.js": "/portfolio/static/js/787.04485897.chunk.js",
+    "static/media/cv_annie_bjurman_2023.pdf": "/portfolio/static/media/cv_annie_bjurman_2023.5d2cef55f2aaf0834ced.pdf",
     "index.html": "/portfolio/index.html",
-    "main.54fd3aef.css.map": "/portfolio/static/css/main.54fd3aef.css.map",
-    "main.5d723391.js.map": "/portfolio/static/js/main.5d723391.js.map",
+    "main.6aa73761.css.map": "/portfolio/static/css/main.6aa73761.css.map",
+    "main.351e1019.js.map": "/portfolio/static/js/main.351e1019.js.map",
     "787.04485897.chunk.js.map": "/portfolio/static/js/787.04485897.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54fd3aef.css",
-    "static/js/main.5d723391.js"
+    "static/css/main.6aa73761.css",
+    "static/js/main.351e1019.js"
   ]
 }
