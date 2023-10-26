@@ -6,7 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FilterCategories } from '../enums'
 import { IProject } from '../interfaces';
 import { projects as proj } from '../constants';
-import { DarkModeIcon, GithubIcon, LinkedInIcon } from '../icons';
+import { CvIcon, DarkModeIcon, GithubIcon, LinkedInIcon } from '../icons';
+// import CvAnnieBjurman2023 from '../files/cv_annie_bjurman_2023.pdf';
 
 function Home() {
   const [projects, setProjects] = useState<IProject[]>([]);
@@ -46,15 +47,15 @@ function Home() {
               {LinkedInIcon(iconColor)}
             </motion.div>
           </a>
-          <a href='https://github.com/anniebjurman'
+          <a href={require('../files/cv_annie_bjurman_2023.pdf')}
             target="_blank"
             rel="noreferrer"
           >
             <motion.div
-              className='icon'
+              className='icon, cv'
               whileHover={{ scale: 1.2 }}
             >
-              {GithubIcon(iconColor)}
+              {CvIcon(iconColor)}
             </motion.div>
           </a>
         </div>

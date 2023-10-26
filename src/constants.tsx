@@ -4,7 +4,7 @@ import { ICreatedWith, IProject } from "./interfaces"
 const projects: IProject[] = [
     {
         id: 0,
-        title: "Mobile design of INSIKT",
+        title: "Mobile design for INSIKT",
         img: ['insikt.png', 'insikt3.png', 'insikt4.png', 'insikt5.png'],
         filter: [FilterCategories.DESIGN],
         color: "#9DCA7C",
@@ -54,11 +54,11 @@ const projects: IProject[] = [
         color: "#83c9b3",
         createdWith: [CreatedWith.FIGMA, CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN, CreatedWith.FIREBASE],
         mobile: true,
-        what: ``,
-        when: ``,
+        what: `An android app for analyzing Systembolaget's various drinks. It is also possible to play multiple people and thus compete against each other.`,
+        when: `Summer 2023.`,
         with_who: `Just me.`,
-        focus: ``,
-        github: null
+        focus: `To understand how android apps are built and also to implement a mulitplayer functionality.`,
+        github: 'https://github.com/anniebjurman/UAMA_VSS_project/tree/projekt_MP'
     },
     {
         id: 5,
@@ -68,9 +68,9 @@ const projects: IProject[] = [
         color: "#CDAD58",
         createdWith: [CreatedWith.ADOBE_XD],
         mobile: false,
-        what: `A prototype of a digital product home for Västerbottensost`,
-        when: `Spring semester 2020`,
-        with_who: `A group of four people`,
+        what: `A prototype of a digital product home for Västerbottensost.`,
+        when: `Spring semester 2020.`,
+        with_who: `A group of four people.`,
         focus: `Understanding the company's vision and apply that in the design of the prototype.`,
         github: null
     },
@@ -96,10 +96,10 @@ const projects: IProject[] = [
         color: "#f5b895",
         createdWith: [CreatedWith.FIGMA, CreatedWith.ANDROID_STUDIO, CreatedWith.KOTLIN],
         mobile: true,
-        what: ``,
-        when: ``,
+        what: `An android app for the dice game Thirty.`,
+        when: `Summer 2023.`,
         with_who: `Just me.`,
-        focus: ``,
+        focus: `To understand how android apps are built.`,
         github: null
     },
     {
@@ -114,7 +114,7 @@ const projects: IProject[] = [
         when: `Summer 2023`,
         with_who: `Just me.`,
         focus: `Building a simple but well-made website to display different projects, that can easily grow as more projects are developed.`,
-        github: null
+        github: 'https://github.com/anniebjurman/portfolio'
     }
 ]
 
