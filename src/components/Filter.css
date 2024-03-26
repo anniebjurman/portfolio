@@ -14,7 +14,7 @@ button {
 }
 
 button.active {
-    color: rgb(28, 28, 28);
+    color: var(--color-text);
 }
 
 @media only screen and (max-width: 768px) {

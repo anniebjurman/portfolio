@@ -6,14 +6,30 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FilterCategories } from '../enums'
 import { IProject } from '../interfaces';
 import { projects as proj } from '../constants';
-import { CvIcon, DarkModeIcon, GithubIcon, LinkedInIcon } from '../icons';
+import { CvIcon, DarkModeIcon, LinkedInIcon } from '../icons';
 // import CvAnnieBjurman2023 from '../files/cv_annie_bjurman_2023.pdf';
+import { useMediaQuery } from "react-responsive";
 
 function Home() {
   const [projects, setProjects] = useState<IProject[]>([]);
   const [filtered, setFiltered] = useState<IProject[]>([]);
   const [activeFilter, setActiveFilter] = useState(FilterCategories.ALL);
-  const iconColor = "#000"
+  // const iconColor = "#000"
+  const [iconColor, setIconColor] = useState<string>("#000");
+  // const [isDark, setIsDark] = useState<boolean>(true);
+
+  const systemPrefersDark = useMediaQuery(
+    {
+      query: "(prefers-color-scheme: dark)",
+    },
+    undefined,
+    (isSystemDark) => {
+      console.log("system", isSystemDark)
+      // setIsDark(isSystemDark)
+      // console.log("dark?", isDark)
+      isSystemDark ? setIconColor('#f4f4f4') : setIconColor('#353e5b');
+    }
+  );
 
   useEffect(() => {
     setThings();
