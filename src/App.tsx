@@ -7,7 +7,7 @@ import ProjectInformation from './pages/ProjectInformation';
 function App() {
 
   return (
-    <div className="App">
+    <div id="App">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="project" element={<ProjectInformation />} />

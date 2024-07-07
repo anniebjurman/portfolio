@@ -6,50 +6,43 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FilterCategories } from '../enums'
 import { IProject } from '../interfaces';
 import { projects as proj } from '../constants';
-import { CvIcon, DarkModeIcon, LinkedInIcon } from '../icons';
+import { CvIcon, LinkedInIcon } from '../icons';
 // import CvAnnieBjurman2023 from '../files/cv_annie_bjurman_2023.pdf';
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
+import { DarkModeToggle } from '../components/DarkModeToggle';
+import { useColorScheme } from '../components/useColorScheme';
+// import { useMediaPredicate } from "react-media-hook";
 
 function Home() {
   const [projects, setProjects] = useState<IProject[]>([]);
   const [filtered, setFiltered] = useState<IProject[]>([]);
   const [activeFilter, setActiveFilter] = useState(FilterCategories.ALL);
-  // const iconColor = "#000"
   const [iconColor, setIconColor] = useState<string>("#000");
-  // const [isDark, setIsDark] = useState<boolean>(true);
-
-  const systemPrefersDark = useMediaQuery(
-    {
-      query: "(prefers-color-scheme: dark)",
-    },
-    undefined,
-    (isSystemDark) => {
-      console.log("system", isSystemDark)
-      // setIsDark(isSystemDark)
-      // console.log("dark?", isDark)
-      isSystemDark ? setIconColor('#f4f4f4') : setIconColor('#353e5b');
-    }
-  );
+  const { isDark, setIsDark } = useColorScheme();
 
   useEffect(() => {
     setThings();
-  }, []);
+  });
 
   const setThings = () => {
     setProjects(proj);
     setFiltered(proj);
+
+    isDark ? setIconColor('#f4f4f4') : setIconColor('#353e5b');
+
   }
+
+  // function initLocalColorScheme() {
+  //   const dark = localStorage.getItem('colorScheme');
+  //   dark == undefined ? : ;
+  //   setIsDark(isD)
+  // }
 
   return (
     <div className="base">
       <div className='icons'>
         <div className='darkIconCont'>
-          <motion.div
-            className='icon'
-            whileHover={{ scale: 1.2 }}
-          >
-            {DarkModeIcon(iconColor)}
-          </motion.div>
+          <DarkModeToggle/>
         </div>
         <div className='iconGroup'>
           <a href='https://www.linkedin.com/in/annie-bjurman-53ba02226/'

@@ -80,7 +80,18 @@ const DarkModeIcon = (fill: string) => (
 )
 
 const LightModeIcon = (fill: string) => (
-    <></>
+    <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22.5" cy="23" r="11" fill={fill} />
+        <rect x="21" y="39" width="3" height="7" rx="1" fill={fill} />
+        <rect x="21" width="3" height="7" rx="1" fill={fill} />
+        <rect x="33.5771" y="36.0815" width="3" height="7" rx="1" transform="rotate(-45 33.5771 36.0815)" fill={fill} />
+        <rect x="6" y="8.50433" width="3" height="7" rx="1" transform="rotate(-45 6 8.50433)" fill={fill} />
+        <rect x="39" y="24" width="3" height="7" rx="1" transform="rotate(-90 39 24)" fill={fill} />
+        <rect y="24" width="3" height="7" rx="1" transform="rotate(-90 0 24)" fill={fill} />
+        <rect x="35.6985" y="13.0711" width="3" height="7" rx="1" transform="rotate(-135 35.6985 13.0711)" fill={fill} />
+        <rect x="8.12134" y="40.6483" width="3" height="7" rx="1" transform="rotate(-135 8.12134 40.6483)" fill={fill} />
+    </svg>
+
 )
 
 const CvIcon = (fill: string) => (

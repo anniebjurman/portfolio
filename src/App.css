@@ -4,6 +4,18 @@
   display: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+  --color-background: #353e5b;
+  --color-text: #f4f4f4;
+  }
+}
+
+body.dark {
+  --color-background: #353e5b;
+  --color-text: #f4f4f4;
+}
+
 body {
   /* define variables */
   --color-background: #f4f4f4; /* FDF5EC F3F6F5 F1F3F9 */
@@ -16,11 +28,4 @@ body {
   padding: 0;
   background-color: var(--color-background);
   color: var(--color-text);
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-  --color-background: #353e5b;
-  --color-text: #f4f4f4;
-  }
 }
