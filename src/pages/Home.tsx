@@ -22,7 +22,7 @@ function Home() {
 
   useEffect(() => {
     setThings();
-  });
+  }, [isDark]);
 
   const setThings = () => {
     setProjects(proj);
