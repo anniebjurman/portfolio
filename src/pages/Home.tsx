@@ -81,6 +81,7 @@ function Home() {
           })}
         </AnimatePresence>
       </motion.div>
+      <footer></footer>
     </div>
   );
 }

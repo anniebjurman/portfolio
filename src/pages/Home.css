@@ -6,7 +6,7 @@
 
 .projects {
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   column-gap: 40px;
   row-gap: 40px;
   flex-wrap: wrap;
@@ -62,6 +62,10 @@ hr {
 
 .darkIconCont img {
   cursor: pointer;
+}
+
+footer {
+  height: 100px;
 }
 
 @media only screen and (max-width: 768px) {
