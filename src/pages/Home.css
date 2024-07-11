@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gravitas+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gravitas+One&display=swap&family=Indie+Flower&display=swap');
 
 .base {
   padding: 1.5% 20%;
@@ -15,14 +15,18 @@
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 150px;
+  /* margin-bottom: 20px; */
+  /* background-color: lightblue; */
 }
 
 h1 {
-  font-size: 4em;
-  font-family: 'Gravitas One', cursive;
+  font-size: 2.5em;
+  /* font-family: 'Gravitas One', cursive; */
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
   color: var(--color-header);
 }
 
@@ -34,33 +38,53 @@ hr {
 }
 
 .icons {
-  width: 100%;
+  width: fit-content;
+  height: fit-content;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  /* flex-direction: column; */
+  align-items: flex-end;
+  gap: 30px;
+  /* background-color: pink; */
 }
 
 .icon {
-  scale: 0.85;
+  /* background-color: lightblue; */
 }
 
-.cv {
+h3 {
+  color: black;
+  font-size: 1.1em;
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  color: var(--color-header);
+}
+
+.a_icon {
+  text-decoration: none;
+  /* background-color: beige; */
+}
+
+.a_icon:hover {
+  cursor: pointer;
+}
+
+/* .cv {
   margin-top: 7px;
   scale: 0.82;
-}
+} */
 
-.iconGroup {
+/* .iconGroup {
   display: flex;
-}
+} */
 
-.iconGroup a {
+/* .iconGroup a {
   height: 25px;
-}
+} */
 
-.darkIconCont {
+/* .darkIconCont {
   height: 25px;
   display: flex;
-}
+} */
 
 .darkIconCont img {
   cursor: pointer;

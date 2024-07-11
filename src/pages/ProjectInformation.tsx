@@ -26,6 +26,7 @@ function ProjectInformation(props: any) {
                 <div className='projTitle'>
                     <h1 className='projectTitle'>{project.title}</h1>
                     {getGithubLinkElement(project, iconColor)}
+                    {/* <h3>github</h3> */}
                 </div>
                 <div className='infoContainer'>
                     <div className='cwOuterContainer'>
@@ -47,7 +48,7 @@ function getGithubLinkElement(p: IProject, iconColor: string): JSX.Element {
     if (p.github) {
         return (
             <div className='githubArrowCont'>
-                <AnimateArrow color={"black"} text="Check it out!" />
+                {/* <AnimateArrow color={"black"} text="Check it out!" /> */}
                 <a href={p.github}
                     target="_blank"
                     rel="noreferrer"
@@ -57,7 +58,8 @@ function getGithubLinkElement(p: IProject, iconColor: string): JSX.Element {
                         whileHover={{ scale: 1.1 }}
                         transition={{ type: "spring", stiffness: 300, damping: 10 }}
                     >
-                        {GithubIcon(iconColor)}
+                        {/* {GithubIcon(iconColor)} */}
+                        <h3>github</h3>
                     </motion.div>
                 </a>
             </div>

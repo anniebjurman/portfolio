@@ -21,6 +21,10 @@
     margin-right: 20px;
 }
 
+.path {
+  stroke: var(--color-text);
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 
