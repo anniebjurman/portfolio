@@ -15,7 +15,7 @@ export const DarkModeToggle = () => {
                 console.log("dark", isDark)
             }}
         >
-            {isDark ? LightModeIcon('#f4f4f4') : DarkModeIcon('#353e5b')}
+            {isDark ? LightModeIcon('#EFD6AC') : DarkModeIcon('#1c1c1c')}
         </motion.div>
     );
 };

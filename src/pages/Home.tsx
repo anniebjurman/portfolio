@@ -28,7 +28,7 @@ function Home() {
     setProjects(proj);
     setFiltered(proj);
 
-    isDark ? setIconColor('#f4f4f4') : setIconColor('#353e5b');
+    isDark ? setIconColor('#EFD6AC') : setIconColor('#1c1c1c');
 
   }
 

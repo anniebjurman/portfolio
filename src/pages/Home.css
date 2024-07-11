@@ -23,12 +23,14 @@
 h1 {
   font-size: 4em;
   font-family: 'Gravitas One', cursive;
+  color: var(--color-header);
 }
 
 hr {
   background-color: #D6D6D6;
   border: none;
   height: 1px;
+  background-color: var(--color-hr);
 }
 
 .icons {
@@ -62,10 +64,6 @@ hr {
 
 .darkIconCont img {
   cursor: pointer;
-}
-
-footer {
-  height: 100px;
 }
 
 @media only screen and (max-width: 768px) {

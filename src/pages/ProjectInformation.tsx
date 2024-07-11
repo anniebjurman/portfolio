@@ -38,6 +38,7 @@ function ProjectInformation(props: any) {
                 </div>
                 {getImgElement(project)}
             </div>
+            <footer></footer>
         </motion.div>
     )
 }

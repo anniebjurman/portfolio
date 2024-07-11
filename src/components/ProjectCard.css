@@ -2,7 +2,8 @@
   width: 180px;
   height: 300px;
   object-fit: cover;
-  box-shadow: 2px 4px 10px rgb(0 0 0 / 0.2);
+  box-shadow: 2px 4px 10px var(--color-hr);
+  border-radius: 10px;
 }
 
 h2 {
