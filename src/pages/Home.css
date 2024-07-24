@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gravitas+One&display=swap&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gravitas+One&display=swap&family=Indie+Flower&display=swap&Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 .base {
   padding: 1.5% 20%;
@@ -15,16 +15,42 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 150px;
 }
 
+#inner_header {
+  display: flex;
+  justify-content: space-between;
+  align-items:last baseline;
+  width: 100%;
+  height: fit-content;
+}
+
+.header_name {
+  display: flex;
+  flex-direction: column;
+}
+
+#name_cont {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: fit-content;
+}
+
 h1 {
-  font-size: 2.5em;
-  font-family: "Indie Flower", cursive;
-  font-weight: 400;
+  font-size: 2em;
+  /* font-family: "Indie Flower", cursive; */
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
   color: var(--color-header);
+  margin: 0;
+  padding: 0;
+}
+
+.h1_bold {
+  font-weight: 900;
 }
 
 hr {
@@ -43,10 +69,10 @@ hr {
 }
 
 h3 {
-  color: black;
-  font-size: 1.1em;
-  font-family: "Indie Flower", cursive;
-  font-weight: 400;
+  font-size: 1em;
+  /* font-family: "Indie Flower", cursive; */
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
   color: var(--color-header);
 }
 
@@ -76,6 +102,6 @@ h3 {
   }
 
   h1 {
-    font-size: 3em;
+    font-size: 1.2em;
   }
 }

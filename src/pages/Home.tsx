@@ -41,49 +41,54 @@ function Home() {
   return (
     <div className="base">
       <div className='header'>
-        <h1>ab.</h1>
-        <div className='icons'>
-          {/* <div className='iconGroup'> */}
-          <a href='https://www.linkedin.com/in/annie-bjurman-53ba02226/'
-            target="_blank"
-            rel="noreferrer"
-            className='a_icon'
-          >
-            <motion.div
-              className='icon'
-              whileHover={{ scale: 1.1 }}
+        <div id='inner_header'>
+            <div className='header_name'>
+              <h1>ANNIE</h1>
+              <h1 className='h1_bold'>BJURMAN</h1>
+            </div>
+          <div className='icons'>
+            {/* <div className='iconGroup'> */}
+            <a href='https://www.linkedin.com/in/annie-bjurman-53ba02226/'
+              target="_blank"
+              rel="noreferrer"
+              className='a_icon'
             >
-              {/* {LinkedInIcon(iconColor)} */}
-              <h3>linkedIn</h3>
-            </motion.div>
-          </a>
-          <a href={require('../files/cv_annie_bjurman_2023.pdf')}
-            target="_blank"
-            rel="noreferrer"
-            className='a_icon'
-          >
-            <motion.div
-              className='icon'
-              whileHover={{ scale: 1.2 }}
+              <motion.div
+                className='icon'
+                whileHover={{ scale: 1.1 }}
+              >
+                {/* {LinkedInIcon(iconColor)} */}
+                <h3>linkedIn</h3>
+              </motion.div>
+            </a>
+            <a href={require('../files/cv_annie_bjurman_2023.pdf')}
+              target="_blank"
+              rel="noreferrer"
+              className='a_icon'
             >
-              {/* {CvIcon(iconColor)} */}
-              <h3>cv</h3>
-            </motion.div>
-          </a>
-          {/* </div> */}
-          {/* <DarkModeToggle/> */}
-          <a className='a_icon'>
-            <motion.div
-              className='icon'
-              whileHover={{ scale: 1.1 }}
-              onClick={() => {
-                setIsDark(!isDark)
-                console.log("dark", isDark)
-              }}
-            >
-              {isDark ? <h3>light mode</h3> : <h3>dark mode</h3>}
-            </motion.div>
-          </a>
+              <motion.div
+                className='icon'
+                whileHover={{ scale: 1.2 }}
+              >
+                {/* {CvIcon(iconColor)} */}
+                <h3>cv</h3>
+              </motion.div>
+            </a>
+            {/* </div> */}
+            {/* <DarkModeToggle/> */}
+            <a className='a_icon'>
+              <motion.div
+                className='icon'
+                whileHover={{ scale: 1.1 }}
+                onClick={() => {
+                  setIsDark(!isDark)
+                  console.log("dark", isDark)
+                }}
+              >
+                {isDark ? <h3>light mode</h3> : <h3>dark mode</h3>}
+              </motion.div>
+            </a>
+          </div>
         </div>
       </div>
       <hr></hr>
