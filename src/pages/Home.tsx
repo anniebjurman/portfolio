@@ -57,7 +57,7 @@ function Home() {
               <h3>linkedIn</h3>
             </motion.div>
           </a>
-          <a href={require('../files/cv_annie_bjurman_2023.pdf')}
+          <a href={require('../files/cv_annie_bjurman_2024.pdf')}
             target="_blank"
             rel="noreferrer"
             className='a_icon'
