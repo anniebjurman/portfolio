@@ -86,7 +86,7 @@ const projects: IProject[] = [
         when: `During my exchange studies in Reykjavik Iceland (fall semester 2022).`,
         with_who: `Just me.`,
         focus: `Understanding computer graphics and the Open GL Pipeline.`,
-        github: null
+        github: 'https://github.com/anniebjurman/CG_final_3d_animation'
     },
     {
         id: 9,
@@ -100,7 +100,7 @@ const projects: IProject[] = [
         when: `Summer 2023.`,
         with_who: `Just me.`,
         focus: `To understand how android apps are built.`,
-        github: null
+        github: 'https://github.com/anniebjurman/UAMA_Thirty'
     },
     {
         id: 10,
@@ -111,7 +111,7 @@ const projects: IProject[] = [
         createdWith: [CreatedWith.FIGMA, CreatedWith.REACT, CreatedWith.FRAMER_MOTION, CreatedWith.TYPESCRIPT],
         mobile: false,
         what: `A portfolio with the purpose to showcase different projects.`,
-        when: `Summer 2023`,
+        when: `Spring 2024`,
         with_who: `Just me.`,
         focus: `Building a simple but well-made website to display different projects, that can easily grow as more projects are developed.`,
         github: 'https://github.com/anniebjurman/portfolio'
